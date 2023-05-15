@@ -15,3 +15,7 @@ export const Sections = styled.div`
   flex-direction: column;
   gap: 12px;
 `;
+
+export const Wrapper = styled.div`
+  background: #fafafa;
+`;

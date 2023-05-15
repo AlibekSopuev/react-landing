@@ -8,5 +8,4 @@ export const Layout = styled.div`
 
 export const Container = styled.div`
   width: 100%;
-  padding: 12px 16px;
 `;

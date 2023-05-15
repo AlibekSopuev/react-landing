@@ -1,24 +1,20 @@
 import { SvgPropsTypes } from './types';
 
 export const IconMoneySom = (props: SvgPropsTypes) => (
-  <svg {...props} width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <svg {...props} width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
-      fillRule='evenodd'
-      clipRule='evenodd'
-      d='M4 8H20C21.105 8 22 8.895 22 10V20C22 21.105 21.105 22 20 22H4C2.895 22 2 21.105 2 20V10C2 8.895 2.895 8 4 8Z'
-      stroke='#5243C2'
-      strokeWidth='1.5'
+      d='M11.3333 23.3108L20.0444 23.3108'
+      stroke='#0B6956'
+      strokeWidth='3'
       strokeLinecap='round'
       strokeLinejoin='round'
     />
-    <path d='M10 18.5L14 18.5' stroke='#5243C2' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-    <path d='M20 5H4' stroke='#5243C2' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-    <path d='M19 2H5' stroke='#5243C2' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
     <path
-      d='M13.0045 12.2705C12.6918 12.0889 12.3357 11.9955 11.9741 12.0002C11.6125 12.0049 11.2589 12.1075 10.951 12.2972C10.6432 12.4868 10.3924 12.7564 10.2256 13.0772C10.0588 13.3981 9.98202 13.7581 10.0035 14.1191C10.0251 14.4801 10.1441 14.8285 10.3479 15.1272C10.5517 15.4259 10.8327 15.6638 11.1609 15.8155C11.4892 15.9672 11.8524 16.0271 12.212 15.9887C12.5716 15.9504 12.9141 15.8153 13.203 15.5978'
-      stroke='#5243C2'
-      strokeWidth='1.5'
-      strokeLinecap='round'
+      d='M19.2845 8.83322C18.4106 8.38001 17.4302 8.17222 16.4476 8.23196C15.465 8.29169 14.517 8.61671 13.7044 9.17243C12.8919 9.72815 12.2452 10.4938 11.8332 11.3878C11.4212 12.2819 11.2594 13.2709 11.3648 14.2496C11.4703 15.2284 11.8391 16.1602 12.4321 16.946C13.0251 17.7318 13.82 18.342 14.7323 18.7119C15.6446 19.0818 16.6401 19.1974 17.6129 19.0464C18.5856 18.8955 19.4993 18.4836 20.2565 17.8546'
+      stroke='#0B6956'
+      strokeWidth='3'
+      strokeLinejoin='round'
     />
+    <circle cx='16' cy='16' r='14' stroke='#0B6956' strokeWidth='3' />
   </svg>
 );
