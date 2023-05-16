@@ -26,7 +26,6 @@ export const DesktopLogoCover = styled.div`
 `;
 
 export const PhoneNumber = styled.a`
-  display: block;
   font-family: 'PT Root UI', sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -35,4 +34,6 @@ export const PhoneNumber = styled.a`
   color: #121112;
 `;
 
-export const RightContent = styled.div``;
+export const RightContent = styled.div`
+  display: flex;
+`;

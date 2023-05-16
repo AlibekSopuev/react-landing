@@ -18,4 +18,12 @@ export const Sections = styled.div`
 
 export const Wrapper = styled.div`
   background: #fafafa;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
 `;

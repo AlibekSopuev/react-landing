@@ -35,10 +35,11 @@ export const Item3 = styled(AdvantagesBlock)`
 
 export const ProductBenefitsWrapper = styled.div`
   width: 100%;
+  //max-width: 1200px;
+  align-items: center;
   margin-bottom: 80px;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 export const ProductBenefitsContainer = styled.div`
   padding: 80px 120px;
