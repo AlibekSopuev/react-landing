@@ -11,8 +11,8 @@ import { Footer } from './footer';
 export default function () {
   return (
     <Wrapper>
+      <AppHeader />
       <Container>
-        <AppHeader />
         <Banner />
         <ProductBenefits />
         <Advantages />

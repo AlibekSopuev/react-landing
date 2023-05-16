@@ -8,8 +8,14 @@ export const Header = styled.header`
   top: 0;
   background: #fafafa;
   z-index: 10;
-  padding: 32px 120px;
   box-shadow: 0 16px 24px rgba(176, 176, 204, 0.08);
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 120px;
 `;
 
 export const HeaderBottom = styled.div`
@@ -36,4 +42,5 @@ export const PhoneNumber = styled.a`
 
 export const RightContent = styled.div`
   display: flex;
+  gap: 16px;
 `;
