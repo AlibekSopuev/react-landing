@@ -27,7 +27,6 @@ export const Footer: React.FC = () => {
             <BottomContentBoxText style={{ minWidth: 380, marginBottom: 24 }}></BottomContentBoxText>
             <BottomContentBoxText style={{ minWidth: 400 }}></BottomContentBoxText>
           </BottomContentBox>
-          {/*<Empty />*/}
           <BottomContentBox style={{ marginRight: 0 }}>
             <BottomContentBoxTitle>dcb.kg</BottomContentBoxTitle>
             <BottomContentBoxText>Головной офис</BottomContentBoxText>

@@ -6,7 +6,7 @@ export const FooterCover = styled.footer`
 `;
 
 export const Container = styled.div`
-  max-width: 1232px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 `;
@@ -68,12 +68,22 @@ export const BottomContentBox = styled.div`
 `;
 
 export const BottomContentBoxTitle = styled.h6`
-  color: var(--grey-200);
+  font-family: 'PT Root UI', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  color: #868588;
   margin-bottom: 20px;
 `;
 
 export const BottomContentBoxText = styled.div`
-  color: var(--grey-200);
+  font-family: 'PT Root UI', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.15px;
+  color: #434344;
 `;
 
 export const Empty = styled.div`

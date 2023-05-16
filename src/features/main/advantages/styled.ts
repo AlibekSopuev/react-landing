@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const AdvantagesGrid = styled.div`
   display: grid;
   grid-gap: 24px;
-  background-color: #fff;
   color: #444;
 `;
 
@@ -14,7 +13,6 @@ export const AdvantagesBlock = styled.div`
   align-items: flex-start;
   padding: 40px;
   max-width: 585px;
-  //max-height: 471px;
   background: #ffffff;
   box-shadow: 0 4px 100px rgba(50, 160, 113, 0.02);
   border-radius: 24px;
