@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Title,
@@ -6,18 +6,28 @@ import {
   Number,
   BlocksWrapper,
   CalculatorWrapper,
-  StyledInvestmentSlider,
   ValuesContainer,
   FromToValues,
   StyledTypography,
 } from './styled';
-import { InvestmentSlider } from '../../../components/shared/investmentSlider';
+import { InvestmentSlider } from 'src/components/shared/investmentSlider';
+import { formatMoney } from 'src/helpers/utils';
 
 export const Calculator = () => {
+  const [investment, setInvestment] = useState([1000]);
+
+  const handleChange = (newValues: number[]) => {
+    setInvestment(newValues);
+  };
+
+  const bondsAmount = investment[0] / 1000;
+  const quarterIncome = formatMoney((investment[0] * 0.16) / 4);
+  const finalSum = formatMoney(investment[0] * 0.16 * 3 + investment[0]);
+
   return (
     <Container>
       <CalculatorWrapper>
-        <StyledInvestmentSlider />
+        <InvestmentSlider amount={investment} onChange={handleChange} min={1000} max={8500000} />
         <ValuesContainer>
           <FromToValues>
             <StyledTypography variant={'body_a'}>На период</StyledTypography>
@@ -28,19 +38,19 @@ export const Calculator = () => {
       <BlocksWrapper>
         <Block>
           <Title>Количество облигаций:</Title>
-          <Number>10</Number>
+          <Number>{bondsAmount}</Number>
         </Block>
         <Block>
-          <Title>Процент годовых</Title>
+          <Title>Процент годовых:</Title>
           <Number>16%</Number>
         </Block>
         <Block>
-          <Title>Ежеквартальный доход</Title>
-          <Number>40 000 сом</Number>
+          <Title>Ежеквартальный доход:</Title>
+          <Number>{quarterIncome} сом</Number>
         </Block>
         <Block>
-          <Title>Общий обьем инвестиций</Title>
-          <Number>1 480000 сом</Number>
+          <Title>Сумма в конце срока:</Title>
+          <Number>{finalSum} сом</Number>
         </Block>
       </BlocksWrapper>
     </Container>

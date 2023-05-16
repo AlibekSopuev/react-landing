@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { RangeSlider } from 'src/components/ui/rangeSlider';
 import { FromToValues, StyledTypography, SliderContainer, ValuesContainer } from './styled';
+import { IRangeSliderProps } from 'src/components/ui/rangeSlider/types';
+import { formatMoney } from 'src/helpers/utils';
 
-export const InvestmentSlider: React.FC = () => {
-  const [investment, setInvestment] = useState([0]);
-
-  const handleChange = (newValues: number[]) => {
-    setInvestment(newValues);
-  };
-
+export const InvestmentSlider: React.FC<IRangeSliderProps> = ({ onChange, amount, min, max }) => {
   return (
     <ValuesContainer>
       <FromToValues>
         <StyledTypography variant='body_a'>Сумма инвестирования</StyledTypography>
-        <StyledTypography variant='body_a'>{investment[0]}</StyledTypography>
+        <StyledTypography variant='body_a'>{formatMoney(amount[0]) + ' c'}</StyledTypography>
       </FromToValues>
       <SliderContainer>
-        <RangeSlider amount={investment} onChange={handleChange} min={0} max={1000000} />
+        <RangeSlider amount={amount} onChange={onChange} min={min} max={max} />
       </SliderContainer>
     </ValuesContainer>
   );
