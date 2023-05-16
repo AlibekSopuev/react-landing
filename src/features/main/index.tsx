@@ -7,6 +7,7 @@ import { Instructions } from './instructions';
 import { Banner } from './banner';
 import { AppHeader } from './header';
 import { Footer } from './footer';
+import { Calculator } from './calculator';
 
 export default function () {
   return (
@@ -14,6 +15,7 @@ export default function () {
       <AppHeader />
       <Container>
         <Banner />
+        <Calculator />
         <ProductBenefits />
         <Advantages />
         <Purposes />

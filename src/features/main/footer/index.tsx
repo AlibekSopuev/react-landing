@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             <IconSocialMedias />
           </BottomContentBox>
           <BottomContentBox>
-            <BottomContentBoxTitle>1997-2023 © ОАО "Дос-Кредобанк" Лиц. НБКР №037 </BottomContentBoxTitle>
+            <BottomContentBoxTitle>1997-2023 © ОАО `&quot;`Дос-Кредобанк`&quot;` Лиц. НБКР №037 </BottomContentBoxTitle>
             <BottomContentBoxText style={{ minWidth: 380, marginBottom: 24 }}></BottomContentBoxText>
             <BottomContentBoxText style={{ minWidth: 400 }}></BottomContentBoxText>
           </BottomContentBox>
