@@ -4,7 +4,7 @@ stages:
   - deploy_prod
 
 variables:
-  APP_NAME: app-homepage
+  APP_NAME: app-dcb-green
   NAMESPACE: default
   CONTAINER_IMAGE: $CI_REGISTRY/$CI_PROJECT_PATH
   KUBEFOLDER: /root/.kube

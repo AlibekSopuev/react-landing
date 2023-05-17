@@ -4,7 +4,7 @@
 replicaCount: 1
 
 image:
-  repository: gitlab.dcb.kg/dcb/frontend/homepage
+  repository: gitlab.dcb.kg/dcb/frontend/dcb-green
   pullPolicy: Always
   pullSecrets: dcb-registry-key
 
@@ -21,7 +21,7 @@ servicePorts:
 env:
   ENV: 'development'
   PORT: 3000
-  URL: '/homepage'
+  URL: '/dcb-green'
   JWT: 'http://kube-master.linux.doscredobank.kg/authentication/auth/token'
   BASE_URL: 'http://kube-master.linux.doscredobank.kg'
 
@@ -35,15 +35,15 @@ ingress:
         paths:
           - backend:
               service:
-                name: app-homepage
+                name: app-dcb-green
                 port:
                   number: 80
-            path: /homepage/(.*)
+            path: /dcb-green/(.*)
             pathType: Prefix
           - backend:
               service:
-                name: app-homepage
+                name: app-dcb-green
                 port:
                   number: 80
-            path: /homepage
+            path: /dcb-green
             pathType: Prefix
