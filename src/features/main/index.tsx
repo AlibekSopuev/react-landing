@@ -19,7 +19,7 @@ export default function () {
       <Advantages />
       <Purposes />
       <Instructions />
-        <Questions />
+      <Questions />
     </>
   );
 }

@@ -13,7 +13,7 @@ export const Header = styled.header`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1400px;
+  //max-width: 1200px;
   margin: 0 auto;
   padding: 32px 120px;
 `;

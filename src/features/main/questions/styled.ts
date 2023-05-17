@@ -16,9 +16,48 @@ export const Title = styled.div`
 
 export const Text = styled.div`
   font-family: 'PT Root UI', sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
   color: #323233;
+  & > span {
+    font-weight: 550;
+  }
+
+  a {
+    color: #10a060;
+    text-decoration: underline;
+  }
+`;
+
+export const TextWithMargin = styled.div`
+  font-family: 'PT Root UI', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #323233;
+  margin-bottom: 35px;
+
+  & > span {
+    font-weight: 550;
+  }
+
+  a {
+    color: #10a060;
+    text-decoration: underline;
+  }
+`;
+
+export const BoxList = styled.ul`
+  list-style-type: decimal;
+
+  & li {
+    font-family: 'PT Root UI', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #323233;
+    margin-left: 22px;
+    margin-bottom: 12px;
+  }
 `;
