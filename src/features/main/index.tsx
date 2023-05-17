@@ -8,6 +8,7 @@ import { Banner } from './banner';
 import { AppHeader } from './header';
 import { Footer } from './footer';
 import { Calculator } from './calculator';
+import { Questions } from './questions';
 
 export default function () {
   return (
@@ -20,6 +21,7 @@ export default function () {
         <Advantages />
         <Purposes />
         <Instructions />
+        <Questions />
         <Footer />
       </Container>
     </Wrapper>
