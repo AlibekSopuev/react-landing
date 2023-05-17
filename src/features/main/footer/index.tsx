@@ -7,6 +7,8 @@ import {
   BottomContentBoxText,
   Empty,
   Container,
+  BankInfoBox,
+  BankLicense,
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
 import { IconSocialMedias } from '../../../components/icons/iconSocialMedias';
@@ -22,11 +24,9 @@ export const Footer: React.FC = () => {
             </BottomContentBoxTitle>
             <IconSocialMedias />
           </BottomContentBox>
-          <BottomContentBox>
-            <BottomContentBoxTitle>1997-2023 © ОАО `&quot;`Дос-Кредобанк`&quot;` Лиц. НБКР №037 </BottomContentBoxTitle>
-            {/*<BottomContentBoxText style={{ minWidth: 380, marginBottom: 24 }}></BottomContentBoxText>*/}
-            {/*<BottomContentBoxText style={{ minWidth: 400 }}></BottomContentBoxText>*/}
-          </BottomContentBox>
+          <BankInfoBox>
+            <BankLicense>1997-2023 © ОАО &quot;Дос-Кредобанк&quot; Лиц. НБКР №037 </BankLicense>
+          </BankInfoBox>
           <BottomContentBox style={{ marginRight: 0 }}>
             <BottomContentBoxTitle>dcb.kg</BottomContentBoxTitle>
             <BottomContentBoxText>Головной офис</BottomContentBoxText>

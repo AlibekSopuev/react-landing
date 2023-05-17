@@ -8,7 +8,8 @@ export const Banner = () => {
       <TextBlock>
         <Title>Инвестируйте в зелёное будущее Кыргызстана</Title>
         <Text>
-          Зелёные облигации DOSCREDOBANK <br /> <span>16%</span> годовых{' '}
+          и зарабатывайте 16% годовых благодаря <br />
+          Зеленым облигациям DOSCREDOBANK
         </Text>
       </TextBlock>
       <ImgBlock>

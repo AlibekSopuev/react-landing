@@ -12,6 +12,7 @@ export const Title = styled.div`
   letter-spacing: 0.15px;
   color: #121112;
   margin-bottom: 64px;
+  margin-top: 64px;
 `;
 
 export const Text = styled.div`

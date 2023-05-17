@@ -9,7 +9,6 @@ export const Button = styled.button<IButtonProps>`
   padding: 0 16px;
   margin: 0;
   font-family: 'PT Root UI', sans-serif;
-  font-weight: 700;
   font-size: 17px;
   line-height: 17px;
   letter-spacing: 0.4px;

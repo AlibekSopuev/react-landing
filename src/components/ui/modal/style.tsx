@@ -8,6 +8,7 @@ export const ModalWrapper = styled.div`
   right: 0;
   bottom: 0;
   backdrop-filter: blur(4px);
+  z-index: 2;
 `;
 
 export const StyledCrossIcon = styled(IconCross)`
@@ -25,7 +26,7 @@ export const ModalBackDrop = styled.div`
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const ModalContent = styled.div`

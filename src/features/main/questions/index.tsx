@@ -71,9 +71,12 @@ export const Questions = () => {
         <TextWithMargin>
           <span>ФК «Сенти»</span>
           <div> Адрес: Пр. Чуй, 219, 9 этаж</div>
-          <div>Телефон: +996 (312) 61 45 89</div> <div> WhatsApp: +996 (700) 61 00 25</div>{' '}
+          <div>Телефон: +996 (312) 61 45 89</div> <div> WhatsApp: +996 (700) 61 00 25</div>
           <div>
-            Веб-сайт: <a href={'https://senti.kg/'}>www.senti.kg</a>
+            Веб-сайт:{' '}
+            <a target='_blank' rel='noreferrer' href={'https://senti.kg/'}>
+              www.senti.kg
+            </a>
           </div>
         </TextWithMargin>
         <Text>
@@ -81,7 +84,10 @@ export const Questions = () => {
           <div>Адрес: г. Бишкек, пр. Чуй 92, ГУМ «Чынар», -1 этаж</div>
           <div>Телефон: 8686 (звонок с мобильного бесплатный)</div>
           <div>
-            Веб-сайт: <a href={'https://www.dcb.kg/ru/'}>www.dcb.kg</a>
+            Веб-сайт:{' '}
+            <a target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
+              www.dcb.kg
+            </a>
           </div>
           <div> Узнать адреса отделений банка Вы можете здесь</div>
         </Text>

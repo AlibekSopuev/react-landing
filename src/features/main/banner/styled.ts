@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { Banner } from './index';
 import { IconBanner } from '../../../components/icons/iconBanner';
 
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  padding: 200px 120px;
+  padding: 250px 12px 120px;
 `;
 
 export const TextBlock = styled.div`
@@ -32,6 +31,7 @@ export const Text = styled.div`
   line-height: 130%;
   letter-spacing: 0.15px;
   color: #616163;
+  margin-top: 24px;
 
   & > span {
     color: #10a060;

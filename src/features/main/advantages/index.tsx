@@ -41,12 +41,11 @@ export const Advantages = () => {
                 <br /> Более 450 000 довольных клиентов
               </AdvantagesText>
             </TextContainer>
-            <Button>
+            <Button target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
               Подробнее о Банке <IconArrowRight />
             </Button>
           </Item1>
           <Item2>
-            {' '}
             <ImgContainer>
               <BackGround>
                 <IconSale />
@@ -56,7 +55,6 @@ export const Advantages = () => {
             <AdvantagesText>16% годовых (16,98 эффективная процентная ставка)</AdvantagesText>
           </Item2>
           <Item3>
-            {' '}
             <ImgContainer>
               <BackGround>
                 <IconStability />

@@ -1,17 +1,35 @@
 import styled from 'styled-components';
-import { IconInstruction } from '../../../components/icons/iconInstruction';
+import Button from '../../../components/ui/button';
 
 export const Wrapper = styled.div`
   padding: 80px 120px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  & > button {
+    max-width: 248px;
+    font-weight: initial;
+  }
+`;
+export const StyledButton = styled(Button)`
+  margin-top: 23px !important;
 `;
 export const Container = styled.div`
   display: flex;
 `;
 
-export const InputWrapper = styled.div``;
+export const InputWrapper = styled.div`
+  border-right: #ebebeb 1px solid;
+  padding-right: 48px;
+  max-width: 500px;
+`;
 
-export const CalculationsWrapper = styled.div``;
+export const CalculationsWrapper = styled.div`
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 export const CalculationTitles = styled.div`
   font-family: 'PT Root UI', sans-serif;
@@ -19,6 +37,7 @@ export const CalculationTitles = styled.div`
   font-size: 16px;
   line-height: 120%;
   color: #616163;
+  margin-bottom: 8px;
 `;
 
 export const Numbers = styled.div`
@@ -29,7 +48,9 @@ export const Numbers = styled.div`
   color: #121112;
 `;
 
-export const Block = styled.div``;
+export const Block = styled.div`
+  text-align: left;
+`;
 
 export const Title = styled.div`
   font-family: 'Fira Sans', sans-serif;
@@ -40,6 +61,7 @@ export const Title = styled.div`
   align-items: center;
   letter-spacing: 0.15px;
   color: #121112;
+  margin-bottom: 16px;
 `;
 
 export const Text = styled.div`
@@ -49,7 +71,9 @@ export const Text = styled.div`
   font-size: 16px;
   line-height: 140%;
   display: flex;
+  text-align: left;
   align-items: center;
   letter-spacing: 0.15px;
   color: #616163;
+  margin-bottom: 24px;
 `;

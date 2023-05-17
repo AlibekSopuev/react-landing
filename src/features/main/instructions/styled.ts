@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { IconInstruction } from '../../../components/icons/iconInstruction';
 
 export const Wrapper = styled.div`
-  padding: 80px 120px;
+  padding: 80px 10px;
   width: 100%;
 `;
 
@@ -23,6 +23,7 @@ export const Title = styled.div`
 export const Container = styled.div`
   width: 100%;
   display: flex;
+  justify-content: space-between;
 `;
 
 export const ImageWrapper = styled.div`
@@ -69,6 +70,6 @@ export const CardText = styled.div`
 `;
 
 export const Bulb = styled(IconInstruction)`
-  width: 343.53px;
-  height: 448px !important;
+  width: 380px;
+  height: 480px !important;
 `;

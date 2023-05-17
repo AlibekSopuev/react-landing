@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 export const Header = styled.header`
   width: 100%;
   display: flex;
@@ -8,13 +8,14 @@ export const Header = styled.header`
   top: 0;
   background: #fafafa;
   box-shadow: 0 16px 24px rgba(176, 176, 204, 0.08);
+  z-index: 1;
 `;
 
 export const Container = styled.div`
   width: 100%;
-  //max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 120px;
+  padding: 32px 0;
 `;
 
 export const HeaderBottom = styled.div`

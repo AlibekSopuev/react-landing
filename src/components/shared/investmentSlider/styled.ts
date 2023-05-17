@@ -8,7 +8,6 @@ export const Container = styled.div`
 export const ValuesContainer = styled.div`
   border-radius: 16px;
   width: 100%;
-  max-width: 528px;
 `;
 
 export const FromToValues = styled.div`

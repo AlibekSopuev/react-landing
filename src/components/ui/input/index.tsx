@@ -85,4 +85,5 @@ export const Container = styled.div`
   outline: none;
   box-shadow: 0 9px 18px rgba(176, 176, 204, 0.2);
   border-radius: 16px;
+  width: 100%;
 `;

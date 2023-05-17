@@ -67,6 +67,11 @@ export const BottomContentBox = styled.div`
   width: 100%;
 `;
 
+export const BankInfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const BottomContentBoxTitle = styled.h6`
   font-family: 'PT Root UI', sans-serif;
   font-weight: 400;
@@ -75,6 +80,16 @@ export const BottomContentBoxTitle = styled.h6`
   letter-spacing: 0.3px;
   color: #868588;
   margin-bottom: 20px;
+`;
+
+export const BankLicense = styled.h6`
+  font-family: 'PT Root UI', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  color: #868588;
+  margin-top: auto;
 `;
 
 export const BottomContentBoxText = styled.div`

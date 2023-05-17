@@ -6,20 +6,47 @@ import {
   Container,
   InputWrapper,
   Numbers,
+  StyledButton,
   Text,
   Title,
   Wrapper,
 } from './styled';
 import Button from '../../../components/ui/button';
 import Modal from '../../../components/ui/modal';
-import { Formik } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { sendApplication } from '../../../services/sendApplication';
 import { InvestmentSlider } from '../../../components/shared/investmentSlider';
 import { Input } from '../../../components/ui/input';
+import { formatMoney } from '../../../helpers/utils';
 
 export const ModalForm = () => {
   const [open, setOpen] = useState(false);
+
+  const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number[] }>({
+    initialValues: { fullName: '', phoneNumber: '', investment: [1000] },
+    onSubmit: async (values) => {
+      const quantity = values.investment[0] / 1000;
+      await sendApplication(values.fullName, values.phoneNumber, quantity);
+      setOpen(false);
+    },
+    validationSchema: Yup.object({
+      fullName: Yup.string().required('required'),
+      phoneNumber: Yup.string().required('required'),
+      investment: Yup.array(),
+    }),
+  });
+
+  const {
+    values: { investment, phoneNumber, fullName },
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = formik;
+
+  const bondsAmount = investment[0] / 1000;
+  const quarterIncome = formatMoney((investment[0] * 0.16) / 4);
+  const finalSum = formatMoney(investment[0] * 0.16 * 3 + investment[0]);
 
   return (
     <Wrapper>
@@ -40,46 +67,29 @@ export const ModalForm = () => {
           <InputWrapper>
             <Title>Оставить заявку</Title>
             <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
-            <Formik
-              onSubmit={async (values) => {
-                console.log({ values });
-                const quantity = values.investment[0] / 1000;
-                await sendApplication(values.fullName, values.phoneNumber, quantity);
-                setOpen(false);
-              }}
-              initialValues={{ fullName: '', phoneNumber: '', investment: [1000] }}
-              validationSchema={Yup.object({
-                fullName: Yup.string().required('required'),
-                phoneNumber: Yup.string().required('required'),
-                investment: Yup.array(),
-              })}
-            >
-              {({ values, handleChange, handleSubmit, setFieldValue }) => (
-                <form onSubmit={handleSubmit}>
-                  <Input name='fullName' onChange={handleChange} value={values.fullName} label='Ваше имя' />
-                  <Input
-                    name='phoneNumber'
-                    onChange={(values) => setFieldValue('phoneNumber', values)}
-                    value={values.phoneNumber}
-                    label='Ваш номер телефона'
-                    mask={'+{996}000000000'}
-                    isMasked
-                  />
-                  <InvestmentSlider
-                    amount={values.investment}
-                    onChange={(values) => setFieldValue('investment', values)}
-                    min={1000}
-                    max={8500000}
-                  />
-                  <Button type='submit'>Оставить заявку</Button>
-                </form>
-              )}
-            </Formik>
+            <form onSubmit={handleSubmit}>
+              <Input name='fullName' onChange={handleChange} value={fullName} label='Ваше имя' />
+              <Input
+                name='phoneNumber'
+                onChange={(values) => setFieldValue('phoneNumber', values)}
+                value={phoneNumber}
+                label='Ваш номер телефона'
+                mask={'+{996}000000000'}
+                isMasked
+              />
+              <InvestmentSlider
+                amount={investment}
+                onChange={(values) => setFieldValue('investment', values)}
+                min={1000}
+                max={1000000}
+              />
+              <StyledButton type='submit'>Оставить заявку</StyledButton>
+            </form>
           </InputWrapper>
           <CalculationsWrapper>
             <Block>
               <CalculationTitles>Количество облигаций</CalculationTitles>
-              <Numbers>10</Numbers>
+              <Numbers>{bondsAmount}</Numbers>
             </Block>
             <Block>
               <CalculationTitles>Процент годовых</CalculationTitles>
@@ -91,11 +101,11 @@ export const ModalForm = () => {
             </Block>
             <Block>
               <CalculationTitles>Ежеквартальный доход</CalculationTitles>
-              <Numbers>40 000 сом</Numbers>
+              <Numbers>{quarterIncome} сом</Numbers>
             </Block>
             <Block>
               <CalculationTitles>Общий обьем инвестиций</CalculationTitles>
-              <Numbers>1 480000 сом</Numbers>
+              <Numbers>{finalSum} сом</Numbers>
             </Block>
           </CalculationsWrapper>
         </Container>

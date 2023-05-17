@@ -40,7 +40,7 @@ export const ProductBenefitsWrapper = styled.div`
   justify-content: center;
 `;
 export const ProductBenefitsContainer = styled.div`
-  padding: 80px 120px;
+  padding: 80px 10px;
   width: 100%;
 `;
 

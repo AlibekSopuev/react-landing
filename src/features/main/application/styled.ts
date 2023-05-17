@@ -17,8 +17,6 @@ export const Title = styled.div`
   font-weight: 600;
   font-size: 48px;
   line-height: 130%;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.0025em;
   color: #121112;
 `;
@@ -34,12 +32,13 @@ export const Text = styled.div`
   color: #616163;
 `;
 
-export const FormBlock = styled.div``;
+export const FormBlock = styled.div`
+  flex-basis: 60%;
+`;
 
 export const InputWrapper = styled.div`
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
 `;
 
 export const CalculatorWrapper = styled.div`
@@ -56,7 +55,7 @@ export const Signature = styled.div`
   color: #888888;
   margin-bottom: 16px;
 
-  & > span {
+  & > a {
     color: #10a060;
     text-decoration: underline;
   }
