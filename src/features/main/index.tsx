@@ -11,17 +11,13 @@ import { Calculator } from './calculator';
 
 export default function () {
   return (
-    <Wrapper>
-      <AppHeader />
-      <Container>
-        <Banner />
-        <Calculator />
-        <ProductBenefits />
-        <Advantages />
-        <Purposes />
-        <Instructions />
-        <Footer />
-      </Container>
-    </Wrapper>
+    <>
+      <Banner />
+      <Calculator />
+      <ProductBenefits />
+      <Advantages />
+      <Purposes />
+      <Instructions />
+    </>
   );
 }
