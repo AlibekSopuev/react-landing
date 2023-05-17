@@ -63,5 +63,5 @@ export const FromToValues = styled.div`
 
 export const StyledTypography = styled(Typography)`
   line-height: 24px;
-  color: ${({ theme }) => theme.colors.text.primary.text800};
+  color: ${({ theme }) => theme.colors.text.secondary.text500};
 `;
