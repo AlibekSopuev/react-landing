@@ -29,7 +29,7 @@ export const ModalBackDrop = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  padding: 0 40px 40px 40px;
+  padding: 56px;
   background: #fff;
   position: absolute;
   top: 50%;
