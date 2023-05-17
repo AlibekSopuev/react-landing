@@ -5,6 +5,9 @@ import viteSvgr from 'vite-plugin-svgr';
 import viteCompression from 'vite-plugin-compression';
 import * as path from 'path';
 
+const applicationsPrefix = '/v1/bond/applications';
+const applicationsHost = 'https://credit.doscredobank.kg/';
+
 export default defineConfig({
   base: '/dcb-green/',
   plugins: [
@@ -15,6 +18,14 @@ export default defineConfig({
     }),
     viteCompression(),
   ],
+  server: {
+    proxy: {
+      [applicationsPrefix]: {
+        target: applicationsHost,
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: [
       {
