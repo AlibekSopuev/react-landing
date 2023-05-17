@@ -47,11 +47,6 @@ export const Number = styled.div`
   color: #121112;
 `;
 
-export const StyledInvestmentSlider = styled(InvestmentSlider)`
-  width: 100%;
-  max-width: 528px;
-`;
-
 export const ValuesContainer = styled.div`
   border-radius: 16px;
   width: 100%;

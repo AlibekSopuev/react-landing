@@ -12,18 +12,14 @@ import { Questions } from './questions';
 
 export default function () {
   return (
-    <Wrapper>
-      <AppHeader />
-      <Container>
-        <Banner />
-        <Calculator />
-        <ProductBenefits />
-        <Advantages />
-        <Purposes />
-        <Instructions />
+    <>
+      <Banner />
+      <Calculator />
+      <ProductBenefits />
+      <Advantages />
+      <Purposes />
+      <Instructions />
         <Questions />
-        <Footer />
-      </Container>
-    </Wrapper>
+    </>
   );
 }
