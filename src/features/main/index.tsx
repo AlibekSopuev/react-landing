@@ -5,6 +5,7 @@ import { Purposes } from './purposes';
 import { Instructions } from './instructions';
 import { Banner } from './banner';
 import { Calculator } from './calculator';
+import { Questions } from './questions';
 import { ModalForm } from './modalForm';
 
 export default function () {
@@ -17,6 +18,7 @@ export default function () {
       <Advantages />
       <Purposes />
       <Instructions />
+      <Questions />
     </>
   );
 }
