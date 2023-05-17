@@ -15,9 +15,11 @@ export const Button = styled.button<IButtonProps>`
   letter-spacing: 0.4px;
   border: none;
   border-radius: 16px;
-  background: ${({ theme }) => theme.colors.track.main};;
+  background: ${({ theme }) => theme.colors.track.main};
   color: ${({ theme }) => theme.colors.text.primary_inverted.contrast_text};
   outline: none;
+  width: 100%;
+  max-width: 536px;
 
   &:not(:disabled):hover {
     opacity: 0.9;

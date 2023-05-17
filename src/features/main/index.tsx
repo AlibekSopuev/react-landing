@@ -7,6 +7,7 @@ import { Banner } from './banner';
 import { Calculator } from './calculator';
 import { Questions } from './questions';
 import { ModalForm } from './modalForm';
+import { Application } from './application';
 
 export default function () {
   return (
@@ -18,6 +19,7 @@ export default function () {
       <Advantages />
       <Purposes />
       <Instructions />
+      <Application />
       <Questions />
     </>
   );
