@@ -5,7 +5,7 @@ import { borderRadius, fontFace, shadow } from './scheme';
 
 const baseTheme: ITheme = {
   colors: lightColors,
-  globalAppContainerWidth: '1400px',
+  globalAppContainerWidth: '1200px',
   borderRadius,
   fontFace,
   shadow,
