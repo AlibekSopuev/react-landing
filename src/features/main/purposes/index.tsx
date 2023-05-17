@@ -14,9 +14,10 @@ const imagesUrls = {
   ecoHouse: 'src/components/icons/ecoHouse.svg',
   ecoAgro: 'src/components/icons/ecoAgro.svg',
   ecoTourism: 'src/components/icons/ecoTourism.svg',
+  ecoTour: 'src/components/icons/ecoTour.svg',
 };
 
-const { electricCars, solarPanels, dripIrrigation, ecoAgro, ecoHouse, ecoTourism } = imagesUrls;
+const { electricCars, solarPanels, dripIrrigation, ecoAgro, ecoHouse, ecoTourism, ecoTour } = imagesUrls;
 
 export const Purposes = () => {
   return (
@@ -47,7 +48,7 @@ export const Purposes = () => {
           <ProductBenefitsCard backgroundImage={ecoAgro}>
             <h2>Эко агро</h2>
           </ProductBenefitsCard>
-          <ProductBenefitsCard backgroundImage={ecoTourism}>
+          <ProductBenefitsCard backgroundImage={ecoTour}>
             <h2>Эко туризм</h2>
           </ProductBenefitsCard>
         </ProductBenefitsGrid>

@@ -37,31 +37,16 @@ export const ProductBenefitsGrid = styled.div`
 `;
 
 export const ProductBenefitsCard = styled.div<ICardProps>`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
   padding: 32px 24px 24px 32px;
   max-width: 384px;
   height: 218px;
-  background: #ffffff;
-  border: 5px;
+  //border: 5px;
   border-radius: 24px;
-  position: relative;
   background: url(${(props) => props.backgroundImage}) no-repeat;
   background-size: 65% 65%;
   background-position: 130px 50px;
   box-shadow: 0 4px 80px rgba(176, 176, 204, 0.07);
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: 0 4px 80px rgba(176, 176, 204, 0.07);
-  }
+  background-color: #ffffff;
 
   h2 {
     font-family: 'PT Root UI', sans-serif;
@@ -70,10 +55,6 @@ export const ProductBenefitsCard = styled.div<ICardProps>`
     font-size: 24px;
     line-height: 130%;
     color: #212021;
-    position: absolute;
-    left: 0;
-    top: 0;
     margin: 0;
-    padding: 32px;
   }
 `;
