@@ -26,4 +26,5 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   width: 100%;
   max-width: 1400px;
+  flex-grow: 1;
 `;
