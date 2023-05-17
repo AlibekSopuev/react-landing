@@ -129,16 +129,16 @@ export const IconSentiLogo = (props: SvgPropsTypes) => (
         y2='-193.363'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#D8B94B' />
-        <stop offset='0.1' stop-color='#E5CC5B' />
-        <stop offset='0.2' stop-color='#FFF27A' />
-        <stop offset='0.3' stop-color='#FDFF9E' />
-        <stop offset='0.41' stop-color='#D8B94B' />
-        <stop offset='0.51' stop-color='#FFD473' />
-        <stop offset='0.62' stop-color='#FDFF9E' />
-        <stop offset='0.7' stop-color='#FFF8BF' />
-        <stop offset='0.88' stop-color='#D8B94B' />
-        <stop offset='1' stop-color='#D8B94B' />
+        <stop stopColor='#D8B94B' />
+        <stop offset='0.1' stopColor='#E5CC5B' />
+        <stop offset='0.2' stopColor='#FFF27A' />
+        <stop offset='0.3' stopColor='#FDFF9E' />
+        <stop offset='0.41' stopColor='#D8B94B' />
+        <stop offset='0.51' stopColor='#FFD473' />
+        <stop offset='0.62' stopColor='#FDFF9E' />
+        <stop offset='0.7' stopColor='#FFF8BF' />
+        <stop offset='0.88' stopColor='#D8B94B' />
+        <stop offset='1' stopColor='#D8B94B' />
       </linearGradient>
     </defs>
   </svg>

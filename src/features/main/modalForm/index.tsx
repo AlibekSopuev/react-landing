@@ -5,8 +5,8 @@ import Modal from '../../../components/ui/modal';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { sendApplication } from '../../../services/sendApplication';
-import { Input } from '../../../components/ui/input';
 import { InvestmentSlider } from '../../../components/shared/investmentSlider';
+import { Input } from '../../../components/ui/input';
 
 export const ModalForm = () => {
   const [open, setOpen] = useState(false);
@@ -22,36 +22,42 @@ export const ModalForm = () => {
       </Button>
       <Modal
         open={open}
-        submit={() => {
-          // setOpen(false);
-          console.log('yo');
-        }}
         onClose={() => {
           setOpen(false);
         }}
       >
         <Formik
-          onSubmit={(values) => sendApplication(values.fullName, values.phoneNumber, 10000)}
-          initialValues={{ fullName: '', phoneNumber: '' }}
+          onSubmit={async (values) => {
+            console.log({ values });
+            const quantity = values.investment[0] / 1000;
+            await sendApplication(values.fullName, values.phoneNumber, quantity);
+            setOpen(false);
+          }}
+          initialValues={{ fullName: '', phoneNumber: '', investment: [1000] }}
           validationSchema={Yup.object({
             fullName: Yup.string().required('required'),
             phoneNumber: Yup.string().required('required'),
+            investment: Yup.array(),
           })}
         >
-          {({ values, handleChange, handleSubmit, isValid, dirty }) => (
+          {({ values, handleChange, handleSubmit, setFieldValue }) => (
             <form onSubmit={handleSubmit}>
-              <Input name='fullName' onChange={handleChange} value={values.fullName} placeholder='Ваше имя' />
+              <Input name='fullName' onChange={handleChange} value={values.fullName} label='Ваше имя' />
               <Input
                 name='phoneNumber'
-                onChange={handleChange}
+                onChange={(values) => setFieldValue('phoneNumber', values)}
                 value={values.phoneNumber}
-                placeholder='Ваш номер телефона'
+                label='Ваш номер телефона'
+                mask={'+{996}000000000'}
+                isMasked
               />
-              {/*<InvestmentSlider amount={investment} onChange={handleChange} min={1000} max={8500000} />*/}
-
-              <Button type='submit' disabled={!isValid || !dirty}>
-                Оставить заявку
-              </Button>
+              <InvestmentSlider
+                amount={values.investment}
+                onChange={(values) => setFieldValue('investment', values)}
+                min={1000}
+                max={8500000}
+              />
+              <Button type='submit'>Оставить заявку</Button>
             </form>
           )}
         </Formik>
