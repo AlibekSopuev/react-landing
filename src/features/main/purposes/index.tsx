@@ -1,23 +1,17 @@
 import React from 'react';
 import {
   ProductBenefitsTitle,
-  ProductBenefitsCard,
   ProductBenefitsGrid,
   ProductBenefitsContainer,
   ProductBenefitsWrapper,
+  Card,
 } from './styled';
-
-const imagesUrls = {
-  electricCars: 'src/components/icons/electricCars.svg',
-  solarPanels: 'src/components/icons/solarPanels.svg',
-  dripIrrigation: 'src/components/icons/dripIrrigation.svg',
-  ecoHouse: 'src/components/icons/ecoHouse.svg',
-  ecoAgro: 'src/components/icons/ecoAgro.svg',
-  ecoTourism: 'src/components/icons/ecoTourism.svg',
-  ecoTour: 'src/components/icons/ecoTour.svg',
-};
-
-const { electricCars, solarPanels, dripIrrigation, ecoAgro, ecoHouse, ecoTourism, ecoTour } = imagesUrls;
+import { IconDripIrrigation } from '../../../components/icons/iconDripIrrigation';
+import { IconElectricCars } from '../../../components/icons/iconElectricCars';
+import { IconEcoAgro } from '../../../components/icons/iconEcoAgro';
+import { IconEcoHouse } from '../../../components/icons/iconEcoHouse';
+import { IconSolarPanels } from '../../../components/icons/iconSolarPanels';
+import { IconEcoTourism } from '../../../components/icons/iconEcoTourism';
 
 export const Purposes = () => {
   return (
@@ -27,30 +21,36 @@ export const Purposes = () => {
           Внесите свой вклад в устойчивое развитие страны <span>и получайте стабильный доход</span>
         </ProductBenefitsTitle>
         <ProductBenefitsGrid>
-          <ProductBenefitsCard backgroundImage={electricCars}>
-            <h2>Электрические автомобили</h2>
-          </ProductBenefitsCard>
-          <ProductBenefitsCard backgroundImage={solarPanels}>
+          <Card>
+            <h2>Электрокары</h2>
+            <IconElectricCars />
+          </Card>
+          <Card>
             <h2>
               Солнечные
               <br /> панели
             </h2>
-          </ProductBenefitsCard>
-          <ProductBenefitsCard backgroundImage={dripIrrigation}>
+            <IconSolarPanels />
+          </Card>
+          <Card>
             <h2>
               Капельное
               <br /> орошение
             </h2>
-          </ProductBenefitsCard>
-          <ProductBenefitsCard backgroundImage={ecoHouse}>
+            <IconDripIrrigation />
+          </Card>
+          <Card>
             <h2>Экодом</h2>
-          </ProductBenefitsCard>
-          <ProductBenefitsCard backgroundImage={ecoAgro}>
+            <IconEcoHouse />
+          </Card>
+          <Card>
             <h2>Эко агро</h2>
-          </ProductBenefitsCard>
-          <ProductBenefitsCard backgroundImage={ecoTour}>
+            <IconEcoAgro />
+          </Card>
+          <Card>
             <h2>Эко туризм</h2>
-          </ProductBenefitsCard>
+            <IconEcoTourism />
+          </Card>
         </ProductBenefitsGrid>
       </ProductBenefitsContainer>
     </ProductBenefitsWrapper>

@@ -6,5 +6,5 @@ export const sendApplication = async (
   phoneNumber: string,
   quantity: number,
 ): Promise<AxiosResponse> => {
-  return await axios.post('/v1/bond/applications', { fullName, phoneNumber, quantity });
+  return await axios.post('https://credit.doscredobank.kg/v1/bond/applications', { fullName, phoneNumber, quantity });
 };

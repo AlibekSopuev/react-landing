@@ -29,7 +29,7 @@ export const InputField = styled.input<IFormInputProps>`
   font-size: 16px;
   line-height: 19px;
   padding: 0 16px;
-  background: transparent;
+  background: ${({ theme }) => theme.colors.grey.primary_inverted.grey50};
   outline: none;
   border-radius: 16px;
   text-decoration: none;

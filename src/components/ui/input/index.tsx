@@ -80,7 +80,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  background: #ffffff;
+  background: #fafafa;
   margin-bottom: 16px;
   outline: none;
   box-shadow: 0 9px 18px rgba(176, 176, 204, 0.2);

@@ -40,7 +40,6 @@ export const ProductBenefitsCard = styled.div<ICardProps>`
   padding: 32px 24px 24px 32px;
   max-width: 384px;
   height: 218px;
-  //border: 5px;
   border-radius: 24px;
   background: url(${(props) => props.backgroundImage}) no-repeat;
   background-size: 65% 65%;
@@ -56,5 +55,31 @@ export const ProductBenefitsCard = styled.div<ICardProps>`
     line-height: 130%;
     color: #212021;
     margin: 0;
+  }
+`;
+
+export const Card = styled.div`
+  padding: 32px 24px 24px 32px;
+  max-width: 384px;
+  height: 218px;
+  border-radius: 24px;
+  box-shadow: 0 4px 80px rgba(176, 176, 204, 0.07);
+  background-color: #ffffff;
+  position: relative;
+
+  h2 {
+    font-family: 'PT Root UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #212021;
+    margin: 0;
+  }
+
+  svg {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
   }
 `;
