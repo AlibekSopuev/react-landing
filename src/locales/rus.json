@@ -1,6 +1,35 @@
 {
   "banner": {
-    "title": "Invest in green future of Kyrgyzstan",
-    "subtitle": "DOSCREDOBANK’s Green Bonds 16%"
+    "title": "Инвестируйте в зелёное будущее Кыргызстана",
+    "subtitle": "и зарабатывайте 16% годовых благодаря Зеленым облигациям DOSCREDOBANK"
+  },
+  "modalForm": {
+    "investButton": "Я инвестирую",
+    "modalTitle": "Оставить заявку",
+    "modalSubtitle": "Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время",
+    "yourName": "Ваше имя",
+    "number": "Ваш номер телефона",
+    "buttonSubmit": "Оставить заявку"
+  },
+  "global": {
+    "investmentAmount":"Сумма инвестирования",
+    "maturity": "На период",
+    "maturityAmount": "года",
+    "numberOfBonds:": "Количество облигаций",
+    "interestRate:": "Процент годовых",
+    "quarterlyIncome:": "Ежеквартальный доход",
+    "totalInvestment:": "Сумма в конце срока",
+    "currency": "сом"
+  },
+  "productBenefits": {
+    "title": "Invest on beneficial terms",
+    "nominalValue": "Nominal value",
+    "volume": "Volume",
+    "interestPayment": "Interest payment",
+    "rate": "16% годовых ",
+    "period": "каждые 3 месяца",
+    "numberOfBonds:": "Количество ценных бумаг",
+    "maturity": "Срок обращения",
+    "interestRate:": "Доходность"
   }
 }
