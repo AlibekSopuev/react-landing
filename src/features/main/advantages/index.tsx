@@ -35,10 +35,10 @@ export const Advantages = () => {
             <TextContainer>
               <AdvantagesTitle>Надёжность</AdvantagesTitle>
               <AdvantagesText>
-                Более 25 лет успешной работы на рынке банковских услуг КР
-                <br /> 50 офисов Банка по всему Кыргызстану
-                <br /> Более 800 сотрудников
-                <br /> Более 450 000 довольных клиентов
+                <div>Более 25 лет успешной работы на рынке банковских услуг КР</div>
+                <div> 50 офисов Банка по всему Кыргызстану</div>
+                <div> Более 800 сотрудников</div>
+                <div> Более 450 000 довольных клиентов</div>
               </AdvantagesText>
             </TextContainer>
             <Button target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>

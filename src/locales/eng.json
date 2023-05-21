@@ -8,10 +8,7 @@
   "modalForm": {
     "investButton": "I invest",
     "modalTitle": "Submit your application",
-    "modalSubtitle": "Please leave your contact information to get back to you as soon as possible!",
-    "yourName": "Your name",
-    "number": "Number",
-    "buttonSubmit": "Submit"
+    "modalSubtitle": "Please leave your contact information to get back to you as soon as possible!"
   },
  "global": {
    "investmentAmount":"Investment amount",
@@ -21,7 +18,12 @@
    "quarterlyIncome:": "Quarterly income",
    "totalInvestment:": "Total investment",
    "currency": "KGS",
-   "maturityAmount": "years"
+   "maturityAmount": "years",
+   "yourName": "Your name",
+   "number": "Number",
+   "buttonSubmit": "Submit",
+   "requiredField": "Required field",
+   "minimumAmount": "Minimum amount — 1 000 KGS"
  },
   "productBenefits": {
     "title": "Invest on beneficial terms",
@@ -33,5 +35,86 @@
     "numberOfBonds:": "Number of bonds",
     "maturity": "Maturity",
     "interestRate:": "Interest rate"
+  },
+  "advantages": {
+    "title": "Benefits",
+    "reliability": "Reliability",
+    "reliabilitySubtitle":{
+      "first":"over 25 years of successful operation in the banking market of the Kyrgyz Republic",
+      "second": "58 offices of the Bank throughout Kyrgyzstan",
+      "third": "more than 800 employees",
+      "fourth":  "more than 450 000 satisfied customers"
+    },
+    "hrefButton": "About the Bank",
+    "interestRate": "High interest rate",
+    "interestRateSubtitle": "16% per annum (16.98 effective interest rate)",
+    "stability": "Stability",
+    "stabilitySubtitle":"Interest income to be paid on a quarterly basis"
+  },
+  "purposes": {
+    "title": "You invest in environmental projects of the country",
+    "subtitle": "Contribute to the country’s sustainable development and earn a steady income",
+    "electricCars": "Electric cars",
+    "solarPanels": "Solar panels",
+    "dripIrrigation": "Drip irrigation",
+    "energyEfficientBuilding": "Energy efficient building",
+    "organicFarming": "Organic farming",
+    "ecoTourism": "Eco-tourism"
+  },
+  "instructions": {
+    "title": "How to invest in green bonds?",
+    "consultation":"Get a consultation",
+    "consultationSubtitle":"We welcome questions at the office of the Finance Company “Senti” or any office of Doscredobank (valid passport is required).",
+    "invest": "Invest",
+    "investSubtitle": "We will advise you on all the details of the investments",
+    "ecoInvestor":"You are a responsible eco-investor!",
+    "ecoInvestorSubtitle": "Your investment will be used to funding projects related to renewable energy, waste management, wastewater treatment, organic farming and other environmentally critical areas!"
+  },
+  "application": {
+    "title": "Invest now!",
+    "subtitle": "Please leave your contact information to get back to you as soon as possible!",
+    "personalInfo": "By submitting an application, I agree to the processing of personal data"
+  },
+  "questions": {
+    "title": "FAQ",
+    "greenBonds": {
+      "title": "What are green bonds?",
+      "descriptionFirst": "In accordance with the International Capital Market Association (ICMA), Green bonds are debt securities designated to finance green projects to protect environment.",
+      "descriptionSecond": "Doscredobank’s Green Bonds are the securities of a stable, dynamic, and reliable company, providing high-interest income on a quarterly basis."
+    },
+    "bondIssuer": {
+      "title": "Who is the bond issuer?",
+      "description": "It is an issuing company that has received a security authorization of the Service for Regulation and Supervision of the Financial Market under the Ministry of Economy and Commerce of the Kyrgyz Republic"
+    },
+    "advantages": {
+      "title": "What are the advantages of green bonds for investors?",
+      "descriptionFirst": "Ability to finance environmental projects with transparent and traceable funds;",
+      "descriptionSecond": "Achievement of its ESG - goals",
+      "descriptionThird": "Building and strengthening an investor’s reputation in environmental efforts and responsible financing of sustainable projects",
+      "descriptionFourth": "Sustainable development factors are crucial in decision making to timely mitigate the long-term possible investment risks."
+    },
+    "bondMethods": {
+      "title":"How are the bonds issued?",
+      "description": "Under the current legislation, bonds are issued in the form of records in the independent registry and have only an undocumented type."
+    },
+    "receiveInterest": {
+      "title":"How do you receive interest on bonds?",
+      "description": "Interest of 16% per annum is accrued quarterly to the settlement account with the possibility of withdrawal in cash or transfer to the bank payment card."
+    },
+    "buyback": {
+      "title":"Can the issuer approach to buyback its own bonds before maturity?",
+      "description": "The conditions and terms of this procedure are specified in the offering memorandum and conditions of public offer of bonds of the respective issuer."
+    },
+    "contacts": {
+      "title": "Where can I learn more about green bonds of Doscredobank?",
+      "description": "To get more detailed information about the bonds, you can apply to the office of the Finance Company “Senti”, or any of the nearest offices of Doscredobank.",
+      "sentiName": "FC “Senti”",
+      "sentiAddress": "Address: 219, Chui Ave, 9th floor",
+      "sentiTelephone": "Telephone:",
+      "sentiWebSite": "Web-site:",
+      "dcbName": "OJSC “Doscredobank”",
+      "dcbAddress": "Address: 92, Chui Ave, Bishkek, -1st floor",
+      "dcbTelephone": "Telephone:"
+    }
   }
 }
