@@ -14,6 +14,12 @@ export interface ITheme {
   fontFace: {
     [key in Fonts]: string;
   };
+  media: {
+    extraLarge: string;
+    large: string;
+    medium: string;
+    small: string;
+  };
 }
 
 export enum ThemeEnum {

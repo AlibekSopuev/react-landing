@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Typography from 'src/components/ui/typography';
 
 export const HeaderText = styled(Typography)`
@@ -27,4 +27,8 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1400px;
   flex-grow: 1;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+    }
+  `}
 `;
