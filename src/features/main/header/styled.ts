@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { LangSwitcher } from '../../../components/shared/langSwitcher';
+
 export const Header = styled.header`
   width: 100%;
   display: flex;
@@ -43,4 +45,8 @@ export const PhoneNumber = styled.a`
 export const RightContent = styled.div`
   display: flex;
   gap: 16px;
+`;
+
+export const StyledLangSwitcher = styled(LangSwitcher)`
+  margin-left: 60px;
 `;

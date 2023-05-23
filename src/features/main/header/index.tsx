@@ -1,8 +1,15 @@
 import React from 'react';
-import { DesktopLogoCover, Header, HeaderBottom, RightContent, PhoneNumber, Container } from './styled';
+import {
+  DesktopLogoCover,
+  Header,
+  HeaderBottom,
+  RightContent,
+  PhoneNumber,
+  Container,
+  StyledLangSwitcher,
+} from './styled';
 import { IconLogo } from '../../../components/icons/iconLogo';
 import { IconSentiLogo } from '../../../components/icons/iconSentiLogo';
-import { LangSwitcher } from '../../../components/shared/langSwitcher';
 
 export const AppHeader = () => {
   return (
@@ -16,7 +23,7 @@ export const AppHeader = () => {
               <PhoneNumber type='tel'>0 (700) 61 00 25</PhoneNumber>
             </RightContent>
           </DesktopLogoCover>
-          <LangSwitcher />
+          <StyledLangSwitcher />
         </HeaderBottom>
       </Container>
     </Header>

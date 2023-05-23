@@ -1,29 +1,58 @@
 import styled from 'styled-components';
-import Typography from 'src/components/ui/typography';
+import { Select } from 'src/components/ui/select';
 
-export const Container = styled.div`
-  margin-top: 8px;
+export const CustomSelect = styled(Select)`
+  .title-container {
+    max-width: 180px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fafafa;
+    border: 2px solid #ebebeb;
+    border-radius: 12px;
+    padding: 12px 12px 12px 20px;
+  }
+
+  .input {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    border: none;
+    padding: 0 0 0 8px;
+    height: initial;
+  }
+
+  .icon-value-container,
+  .icon-container {
+    position: relative;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .dropdownList {
+    width: 202px;
+    padding: 8px;
+    left: -52px;
+    bottom: -170px;
+  }
 `;
 
-export const ValuesContainer = styled.div`
-  border-radius: 16px;
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.grey.primary_inverted.grey50};
-`;
+interface IListItem {
+  selected: boolean;
+}
 
-export const FromToValues = styled.div`
+export const ListItem = styled.li<IListItem>`
   display: flex;
-  justify-content: space-between;
-  padding: 16px 18px;
-  border-radius: 16px;
-  border: 2px solid ${({ theme }) => theme.colors.grey.disabled.grey100};
-`;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 12px 8px;
+  border-radius: 8px;
+  background-color: ${({ selected }) => selected && '#F5F5F5'};
 
-export const StyledTypography = styled(Typography)`
-  line-height: 24px;
-  color: ${({ theme }) => theme.colors.text.primary.text800};
-`;
-
-export const SliderContainer = styled.div`
-  margin: 0 16px -2px 15px;
+  svg {
+    margin-right: 12px;
+  }
 `;

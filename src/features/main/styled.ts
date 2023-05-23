@@ -27,8 +27,4 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1400px;
   flex-grow: 1;
-  ${({ theme }) => css`
-    @media screen and (max-width: ${theme.media.small}) {
-    }
-  `}
 `;
