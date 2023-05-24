@@ -19,6 +19,8 @@ import { sendApplication } from '../../../services/sendApplication';
 import { InvestmentSlider } from '../../../components/shared/investmentSlider';
 import { Input } from '../../../components/ui/input';
 import { formatMoney } from '../../../helpers/utils';
+import { PhoneInputField } from '../../../components/ui/inputField/phone';
+import { InputField } from '../../../components/ui/inputField/main';
 
 export const ModalForm = () => {
   const [open, setOpen] = useState(false);
@@ -44,6 +46,8 @@ export const ModalForm = () => {
     setFieldValue,
   } = formik;
 
+  console.log({ phoneNumber, fullName, investment });
+
   const bondsAmount = investment[0] / 1000;
   const quarterIncome = formatMoney((investment[0] * 0.16) / 4);
   const finalSum = formatMoney(investment[0] * 0.16 * 3 + investment[0]);
@@ -68,15 +72,8 @@ export const ModalForm = () => {
             <Title>Оставить заявку</Title>
             <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
             <form onSubmit={handleSubmit}>
-              <Input name='fullName' onChange={handleChange} value={fullName} label='Ваше имя' />
-              <Input
-                name='phoneNumber'
-                onChange={(values) => setFieldValue('phoneNumber', values)}
-                value={phoneNumber}
-                label='Ваш номер телефона'
-                mask={'+{996}000000000'}
-                isMasked
-              />
+              <InputField placeholder='Ваше имя' name='fullName' value={fullName} onChange={handleChange} />
+              <PhoneInputField onChange={(values) => setFieldValue('phoneNumber', values)} type='phone' />
               <InvestmentSlider
                 amount={investment}
                 onChange={(values) => setFieldValue('investment', values)}

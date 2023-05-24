@@ -1,7 +1,7 @@
 import { SvgPropsTypes } from './types';
 
 export const IconChevronUp = (props: SvgPropsTypes) => (
-  <svg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <svg {...props} width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <g clipPath='url(#clip0_5483_46348)'>
       <circle cx='17' cy='17' r='17' transform='rotate(-180 17 17)' fill='#EBEBEB' />
       <rect width='20.4' height='20.4' transform='matrix(-1 0 0 -1 27.1992 27.2)' fill='#EBEBEB' />
