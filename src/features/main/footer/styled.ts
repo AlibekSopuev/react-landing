@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const FooterCover = styled.footer`
   margin-top: 64px;
-  padding: 0 16px;
+  padding: 16px;
 `;
 
 export const Container = styled.div`
@@ -10,8 +10,6 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 `;
-
-export const FooterTop = styled.div``;
 
 export const FooterBottom = styled.div`
   display: flex;
@@ -24,6 +22,12 @@ export const FooterBottom = styled.div`
   & > div:not(:last-child) {
     margin-right: 60px;
   }
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      display: block;
+      padding: 32px 24px;
+    }
+  `}
 `;
 
 export const TopContentBoxTitle = styled.h3`
@@ -65,14 +69,25 @@ export const BottomContentBox = styled.div`
   min-width: 180px;
   max-width: 210px;
   width: 100%;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-bottom: 0;
+      margin-bottom: 24px;
+    }
+  `}
 `;
 
 export const BankInfoBox = styled.div`
   display: flex;
   flex-direction: column;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-bottom: 24px;
+    }
+  `}
 `;
 
-export const BottomContentBoxTitle = styled.h6`
+export const BottomContentBoxTitle = styled.div`
   font-family: 'PT Root UI', sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -80,6 +95,29 @@ export const BottomContentBoxTitle = styled.h6`
   letter-spacing: 0.3px;
   color: #868588;
   margin-bottom: 20px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-bottom: 16px;
+      svg {
+        width: 143px;
+      }
+    }
+  `}
+`;
+
+export const Label = styled.a`
+  font-family: 'PT Root UI', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  color: #434344;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-bottom: 24px;
+    }
+  `}
 `;
 
 export const BankLicense = styled.h6`

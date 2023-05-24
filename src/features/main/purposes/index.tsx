@@ -17,9 +17,7 @@ export const Purposes = () => {
   return (
     <ProductBenefitsWrapper>
       <ProductBenefitsContainer>
-        <ProductBenefitsTitle>
-          Внесите свой вклад в устойчивое развитие страны <span>и получайте стабильный доход</span>
-        </ProductBenefitsTitle>
+        <ProductBenefitsTitle>Вы инвестируете в эко - проекты страны</ProductBenefitsTitle>
         <ProductBenefitsGrid>
           <Card>
             <h2>Электрокары</h2>

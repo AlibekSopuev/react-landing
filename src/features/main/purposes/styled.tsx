@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ICardProps {
   backgroundImage: string;
@@ -23,9 +23,13 @@ export const ProductBenefitsTitle = styled.div`
   letter-spacing: 0.0025em;
   color: #121112;
   margin-bottom: 64px;
-  & > span {
-    font-weight: bold;
-  }
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 130%;
+    }
+  `}
 `;
 
 export const ProductBenefitsGrid = styled.div`
@@ -34,6 +38,12 @@ export const ProductBenefitsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
   gap: 24px;
   width: 100%;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      grid-template-columns: repeat(auto-fit, minmax(156px, 1fr));
+      gap: 16px;
+    }
+  `}
 `;
 
 export const ProductBenefitsCard = styled.div<ICardProps>`
@@ -69,17 +79,26 @@ export const Card = styled.div`
 
   h2 {
     font-family: 'PT Root UI', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 130%;
     color: #212021;
     margin: 0;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        font-size: 16px;
+      }
+    `}
   }
 
   svg {
     position: absolute;
     right: 20px;
     bottom: 20px;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        width: 160px;
+      }
+    `}
   }
 `;

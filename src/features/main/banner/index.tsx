@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper, TextBlock, ImgBlock, Text, Title, StyledBanner } from './styled';
+import { Wrapper, TextBlock, ImgBlock, Text, Title } from './styled';
 import { IconBanner } from '../../../components/icons/iconBanner';
 
 export const Banner = () => {
@@ -13,7 +13,7 @@ export const Banner = () => {
         </Text>
       </TextBlock>
       <ImgBlock>
-        <StyledBanner />
+        <IconBanner />
       </ImgBlock>
     </Wrapper>
   );

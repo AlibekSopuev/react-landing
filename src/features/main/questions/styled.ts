@@ -1,6 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 48px 16px;
+    }
+  `}
+`;
 
 export const Title = styled.div`
   font-family: 'Fira Sans', sans-serif;
@@ -12,7 +18,14 @@ export const Title = styled.div`
   letter-spacing: 0.15px;
   color: #121112;
   margin-bottom: 64px;
-  margin-top: 64px;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-size: 28px;
+      line-height: 130%;
+      margin-bottom: 40px;
+    }
+  `}
 `;
 
 export const Text = styled.div`
@@ -29,6 +42,11 @@ export const Text = styled.div`
     color: #10a060;
     text-decoration: underline;
   }
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-size: 16px;
+    }
+  `}
 `;
 
 export const TextWithMargin = styled.div`
@@ -47,6 +65,12 @@ export const TextWithMargin = styled.div`
     color: #10a060;
     text-decoration: underline;
   }
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-size: 16px;
+    }
+  `}
 `;
 
 export const BoxList = styled.ul`
@@ -60,5 +84,10 @@ export const BoxList = styled.ul`
     color: #323233;
     margin-left: 22px;
     margin-bottom: 12px;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        font-size: 16px;
+      }
+    `}
   }
 `;

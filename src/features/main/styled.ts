@@ -29,6 +29,7 @@ export const Container = styled.div`
   flex-grow: 1;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
+      display: block;
     }
   `}
 `;

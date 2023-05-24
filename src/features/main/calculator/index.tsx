@@ -9,6 +9,8 @@ import {
   ValuesContainer,
   FromToValues,
   StyledTypography,
+  BlockContainer,
+  LastBlock,
 } from './styled';
 import { InvestmentSlider } from 'src/components/shared/investmentSlider';
 import { formatMoney } from 'src/helpers/utils';
@@ -36,22 +38,26 @@ export const Calculator = () => {
         </ValuesContainer>
       </CalculatorWrapper>
       <BlocksWrapper>
-        <Block>
-          <Title>Количество облигаций:</Title>
-          <Number>{bondsAmount}</Number>
-        </Block>
-        <Block>
-          <Title>Процент годовых:</Title>
-          <Number>16%</Number>
-        </Block>
-        <Block>
-          <Title>Ежеквартальный доход:</Title>
-          <Number>{quarterIncome} сом</Number>
-        </Block>
-        <Block>
-          <Title>Сумма в конце срока:</Title>
-          <Number>{finalSum} сом</Number>
-        </Block>
+        <BlockContainer>
+          <Block>
+            <Title>Количество облигаций:</Title>
+            <Number>{bondsAmount}</Number>
+          </Block>
+          <Block>
+            <Title>Процент годовых:</Title>
+            <Number>16%</Number>
+          </Block>
+        </BlockContainer>
+        <BlockContainer>
+          <Block>
+            <Title>Ежеквартальный доход:</Title>
+            <Number>{quarterIncome} сом</Number>
+          </Block>
+          <LastBlock>
+            <Title>Сумма в конце срока:</Title>
+            <Number>{finalSum} сом</Number>
+          </LastBlock>
+        </BlockContainer>
       </BlocksWrapper>
     </Container>
   );

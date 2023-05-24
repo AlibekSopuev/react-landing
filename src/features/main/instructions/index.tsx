@@ -20,7 +20,7 @@ import { IconThird } from '../../../components/icons/iconThird';
 export const Instructions = () => (
   <Wrapper>
     <Title>
-      Как инвестировать в <span>Зелёные облигации? </span>
+      Как инвестировать в<br /> <span>Зелёные облигации? </span>
     </Title>
     <Container>
       <ImageWrapper>
