@@ -1,5 +1,4 @@
 import React from 'react';
-import { Wrapper, TextBlock, ImgBlock, Text, Title, StyledBanner } from './styled';
 import { useTranslation } from 'react-i18next';
 import { Wrapper, TextBlock, ImgBlock, Text, Title } from './styled';
 import { IconBanner } from '../../../components/icons/iconBanner';
