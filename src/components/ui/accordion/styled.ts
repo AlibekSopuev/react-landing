@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const AccordionCover = styled.div`
   width: 100%;
@@ -25,6 +25,11 @@ export const AccordionTitle = styled.div`
   line-height: 140%;
   color: #121112;
   letter-spacing: 0.15px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-size: 16px;
+    }
+  `}
 `;
 
 export const Child = styled.div``;

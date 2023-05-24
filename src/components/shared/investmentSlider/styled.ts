@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Typography from 'src/components/ui/typography';
 
 export const Container = styled.div`
@@ -9,6 +9,12 @@ export const ValuesContainer = styled.div`
   border-radius: 16px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.grey.primary_inverted.grey50};
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      display: block;
+      margin-bottom: 24px;
+    }
+  `}
 `;
 
 export const FromToValues = styled.div`

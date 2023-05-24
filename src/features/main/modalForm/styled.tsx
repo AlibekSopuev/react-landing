@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../../../components/ui/button';
 
 export const Wrapper = styled.div`
@@ -6,6 +6,11 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 32px 56px 48px;
+    }
+  `}
   & > button {
     max-width: 248px;
     font-weight: initial;

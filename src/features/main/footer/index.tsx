@@ -5,13 +5,14 @@ import {
   BottomContentBox,
   BottomContentBoxTitle,
   BottomContentBoxText,
-  Empty,
   Container,
   BankInfoBox,
   BankLicense,
+  Label,
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
 import { IconSocialMedias } from '../../../components/icons/iconSocialMedias';
+import { Layout } from '../../../components/ui/appContainer/styled';
 
 export const Footer: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ export const Footer: React.FC = () => {
             <BankLicense>1997-2023 © ОАО &quot;Дос-Кредобанк&quot; Лиц. НБКР №037 </BankLicense>
           </BankInfoBox>
           <BottomContentBox style={{ marginRight: 0 }}>
-            <BottomContentBoxTitle>dcb.kg</BottomContentBoxTitle>
+            <Label href={'https://www.dcb.kg/ru/'}>dcb.kg</Label>
             <BottomContentBoxText>Головной офис</BottomContentBoxText>
             <BottomContentBoxText>720000</BottomContentBoxText>
             <BottomContentBoxText>Кыргызская Республика</BottomContentBoxText>
