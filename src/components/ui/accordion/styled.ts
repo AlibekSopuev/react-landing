@@ -15,6 +15,16 @@ export const AccordionHead = styled.div`
   cursor: pointer;
   border-top: solid 1px var(--grey-200);
   padding: 16px 0;
+  svg {
+    max-width: 34px;
+    min-width: 34px;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        max-width: 24px;
+        min-width: 24px;
+      }
+    `}
+  }
 `;
 
 export const AccordionTitle = styled.div`

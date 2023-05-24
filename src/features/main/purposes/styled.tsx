@@ -76,6 +76,11 @@ export const Card = styled.div`
   box-shadow: 0 4px 80px rgba(176, 176, 204, 0.07);
   background-color: #ffffff;
   position: relative;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 24px;
+    }
+  `}
 
   h2 {
     font-family: 'PT Root UI', sans-serif;
@@ -97,7 +102,7 @@ export const Card = styled.div`
     bottom: 20px;
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.media.small}) {
-        width: 160px;
+        width: 105px;
       }
     `}
   }

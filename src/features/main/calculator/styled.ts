@@ -82,6 +82,7 @@ export const Title = styled.div`
   font-size: 16px;
   line-height: 120%;
   color: #111111;
+  margin-bottom: 12px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 14px;

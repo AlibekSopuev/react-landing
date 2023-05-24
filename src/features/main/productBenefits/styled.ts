@@ -54,6 +54,12 @@ export const ProductBenefitsCard = styled.div`
   border: 5px;
   box-shadow: 0 4px 100px rgba(50, 160, 113, 0.02);
   border-radius: 24px;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 16px;
+    }
+  `}
 `;
 
 export const CardText = styled.div`
