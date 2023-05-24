@@ -27,7 +27,7 @@ export const Calculator = () => {
   return (
     <Container>
       <CalculatorWrapper>
-        <InvestmentSlider amount={investment} onChange={handleChange} min={1000} max={8500000} />
+        <InvestmentSlider amount={investment} onChange={handleChange} min={1000} max={1000000} />
         <ValuesContainer>
           <FromToValues>
             <StyledTypography variant={'body_a'}>На период</StyledTypography>

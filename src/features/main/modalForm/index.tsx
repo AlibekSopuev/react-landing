@@ -46,8 +46,6 @@ export const ModalForm = () => {
     setFieldValue,
   } = formik;
 
-  console.log({ phoneNumber, fullName, investment });
-
   const bondsAmount = investment[0] / 1000;
   const quarterIncome = formatMoney((investment[0] * 0.16) / 4);
   const finalSum = formatMoney(investment[0] * 0.16 * 3 + investment[0]);

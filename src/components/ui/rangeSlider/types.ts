@@ -8,7 +8,7 @@ export interface TrackProps {
 }
 
 export interface IRangeSliderProps {
-  amount: number[];
+  amount?: number[];
   onChange: (amount: number[]) => void;
   min: number;
   max: number;
