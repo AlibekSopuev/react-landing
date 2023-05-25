@@ -33,7 +33,7 @@ export const AppHeader = () => {
             {!isMobile && (
               <RightContent>
                 <IconSentiLogo />
-                <PhoneNumber type='tel'>0 (700) 61 00 25</PhoneNumber>
+                <PhoneNumber href='tel:+996700610025'>0 (700) 61 00 25</PhoneNumber>
               </RightContent>
             )}
           </DesktopLogoCover>
