@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { IconBanner } from '../../../components/icons/iconBanner';
 
 export const Wrapper = styled.div`
   display: flex;
