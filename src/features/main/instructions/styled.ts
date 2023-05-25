@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { IconInstruction } from '../../../components/icons/iconInstruction';
 
 export const Wrapper = styled.div`
   padding: 80px 10px;
@@ -111,9 +110,4 @@ export const CardText = styled.div`
       font-size: 14px;
     }
   `}
-`;
-
-export const Bulb = styled(IconInstruction)`
-  width: 380px;
-  height: 480px !important;
 `;

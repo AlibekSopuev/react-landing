@@ -2,7 +2,7 @@ import React from 'react';
 import { BoxList, Container, Text, TextWithMargin, Title } from './styled';
 import { Accordion } from '../../../components/ui/accordion';
 
-export const Questions = () => {
+const Questions = () => {
   return (
     <Container>
       <Title>Часто задаваемые вопросы</Title>
@@ -98,3 +98,5 @@ export const Questions = () => {
     </Container>
   );
 };
+
+export default Questions;

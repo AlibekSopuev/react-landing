@@ -24,7 +24,7 @@ import { InputField } from '../../../components/ui/inputField/main';
 import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
 import { useTranslation } from 'react-i18next';
 
-export const ModalForm = () => {
+const ModalForm = () => {
   const { t } = useTranslation();
   const isMobile = useDeviceDetected();
   const [open, setOpen] = useState(false);
@@ -122,3 +122,5 @@ export const ModalForm = () => {
     </Wrapper>
   );
 };
+
+export default ModalForm;

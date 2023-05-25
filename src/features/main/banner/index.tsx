@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Wrapper, TextBlock, ImgBlock, Text, Title } from './styled';
-import { IconBanner } from '../../../components/icons/iconBanner';
+import BannerImage from 'src/assets/icons/bannerImage.png';
 
-export const Banner = () => {
+const Banner = () => {
   const { t } = useTranslation();
 
   return (
@@ -13,8 +13,10 @@ export const Banner = () => {
         <Text>{t('banner.subtitle')}</Text>
       </TextBlock>
       <ImgBlock>
-        <IconBanner />
+        <img src={BannerImage} alt='' />
       </ImgBlock>
     </Wrapper>
   );
 };
+
+export default Banner;

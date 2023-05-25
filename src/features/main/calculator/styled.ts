@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { InvestmentSlider } from '../../../components/shared/investmentSlider';
 import Typography from '../../../components/ui/typography';
 
 export const Container = styled.div`

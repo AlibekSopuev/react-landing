@@ -12,7 +12,6 @@ import {
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
 import { IconSocialMedias } from '../../../components/icons/iconSocialMedias';
-import { Layout } from '../../../components/ui/appContainer/styled';
 
 export const Footer: React.FC = () => {
   return (

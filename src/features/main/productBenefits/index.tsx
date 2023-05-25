@@ -10,15 +10,15 @@ import {
   BackGround,
   ProductBenefitsWrapper,
 } from './styled';
-import { IconMoneySom } from '../../../components/icons/moneySom';
-import { IconSecurities } from '../../../components/icons/iconSecurities';
-import { IconMoneyBag } from '../../../components/icons/iconMoneyBag';
-import { IconDeadline } from '../../../components/icons/iconDeadline';
-import { IconIncome } from '../../../components/icons/iconIncome';
-import { IconPerсent } from '../../../components/icons/iconPercent';
+import moneyBagImage from 'src/assets/icons/moneyBagImage.png';
+import som from 'src/assets/icons/som.png';
+import securitiesImage from 'src/assets/icons/securities.png';
+import deadline from 'src/assets/icons/deadline.png';
+import fire from 'src/assets/icons/fire.png';
+import percent from 'src/assets/icons/percent.png';
 import { useTranslation } from 'react-i18next';
 
-export const ProductBenefits = () => {
+const ProductBenefits = () => {
   const { t } = useTranslation();
   return (
     <ProductBenefitsWrapper>
@@ -28,7 +28,7 @@ export const ProductBenefits = () => {
           <ProductBenefitsCard>
             <ImgContainer>
               <BackGround>
-                <IconMoneySom />
+                <img src={som} alt='' />
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.nominalValue')}</CardText>
@@ -37,7 +37,7 @@ export const ProductBenefits = () => {
           <ProductBenefitsCard>
             <ImgContainer>
               <BackGround>
-                <IconSecurities />
+                <img src={securitiesImage} alt='' />
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.numberOfBonds')}</CardText>
@@ -46,7 +46,7 @@ export const ProductBenefits = () => {
           <ProductBenefitsCard>
             <ImgContainer>
               <BackGround>
-                <IconMoneyBag />
+                <img src={moneyBagImage} alt='' />
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.volume')}</CardText>
@@ -55,7 +55,7 @@ export const ProductBenefits = () => {
           <ProductBenefitsCard>
             <ImgContainer>
               <BackGround>
-                <IconDeadline />
+                <img src={deadline} alt='' />
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.maturity')}</CardText>
@@ -64,7 +64,7 @@ export const ProductBenefits = () => {
           <ProductBenefitsCard>
             <ImgContainer>
               <BackGround>
-                <IconIncome />
+                <img src={fire} alt='' />
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.interestRate')}</CardText>
@@ -73,7 +73,7 @@ export const ProductBenefits = () => {
           <ProductBenefitsCard>
             <ImgContainer>
               <BackGround>
-                <IconPerсent />
+                <img src={percent} alt='' />
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.interestPayment')}</CardText>
@@ -84,3 +84,5 @@ export const ProductBenefits = () => {
     </ProductBenefitsWrapper>
   );
 };
+
+export default ProductBenefits;

@@ -15,7 +15,7 @@ import {
 import { InvestmentSlider } from 'src/components/shared/investmentSlider';
 import { formatMoney } from 'src/helpers/utils';
 
-export const Calculator = () => {
+const Calculator = () => {
   const [investment, setInvestment] = useState([1000]);
 
   const handleChange = (newValues: number[]) => {
@@ -62,3 +62,5 @@ export const Calculator = () => {
     </Container>
   );
 };
+
+export default Calculator;

@@ -6,15 +6,15 @@ import {
   ProductBenefitsWrapper,
   Card,
 } from './styled';
-import { IconDripIrrigation } from '../../../components/icons/iconDripIrrigation';
-import { IconElectricCars } from '../../../components/icons/iconElectricCars';
-import { IconEcoAgro } from '../../../components/icons/iconEcoAgro';
-import { IconEcoHouse } from '../../../components/icons/iconEcoHouse';
-import { IconSolarPanels } from '../../../components/icons/iconSolarPanels';
-import { IconEcoTourism } from '../../../components/icons/iconEcoTourism';
+import solarPanelsImage from 'src/assets/icons/solarPanels.png';
+import electroCarImage from 'src/assets/icons/electroCar.png';
+import dripIrrigation from 'src/assets/icons/dripIrrigation.png';
+import ecoHouse from 'src/assets/icons/ecoHouse.png';
+import ecoAgro from 'src/assets/icons/ecoAgro.png';
+import ecoTourism from 'src/assets/icons/ecoTourism.png';
 import { useTranslation } from 'react-i18next';
 
-export const Purposes = () => {
+const Purposes = () => {
   const { t } = useTranslation();
   return (
     <ProductBenefitsWrapper>
@@ -23,30 +23,32 @@ export const Purposes = () => {
         <ProductBenefitsGrid>
           <Card>
             <h2>{t('purposes.electricCars')}</h2>
-            <IconElectricCars />
+            <img src={electroCarImage} alt='' />
           </Card>
           <Card>
             <h2>{t('purposes.solarPanels')}</h2>
-            <IconSolarPanels />
+            <img src={solarPanelsImage} alt='' />
           </Card>
           <Card>
             <h2>{t('purposes.dripIrrigation')}</h2>
-            <IconDripIrrigation />
+            <img src={dripIrrigation} alt='' />
           </Card>
           <Card>
             <h2>{t('purposes.energyEfficientBuilding')}</h2>
-            <IconEcoHouse />
+            <img src={ecoHouse} alt='' />
           </Card>
           <Card>
             <h2>{t('purposes.organicFarming')}</h2>
-            <IconEcoAgro />
+            <img src={ecoAgro} alt='' />
           </Card>
           <Card>
             <h2>{t('purposes.ecoTourism')}</h2>
-            <IconEcoTourism />
+            <img src={ecoTourism} alt='' />
           </Card>
         </ProductBenefitsGrid>
       </ProductBenefitsContainer>
     </ProductBenefitsWrapper>
   );
 };
+
+export default Purposes;

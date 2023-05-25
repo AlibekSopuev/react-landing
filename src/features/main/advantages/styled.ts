@@ -24,7 +24,7 @@ export const AdvantagesBlock = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       padding: 24px;
-      margin: 16px;
+      margin-bottom: 16px;
     }
   `}
 `;

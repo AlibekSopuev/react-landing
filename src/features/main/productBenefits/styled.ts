@@ -93,10 +93,10 @@ export const CardNumbers = styled.div`
 
 export const ImgContainer = styled.div`
   margin-bottom: 32px;
-  svg {
+  img {
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.media.small}) {
-        width: 18.08px;
+        width: 14px;
       }
     `}
   }

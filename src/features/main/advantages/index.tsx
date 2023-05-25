@@ -14,14 +14,13 @@ import {
   ProductBenefitsWrapper,
   TextContainer,
 } from './styled';
-import { IconDeadline } from '../../../components/icons/iconDeadline';
 import { IconArrowRight } from '../../../components/icons/iconArrowRight';
 import { IconSafety } from '../../../components/icons/iconSafety';
 import { IconSale } from '../../../components/icons/iconSale';
 import { IconStability } from '../../../components/icons/iconStability';
 import { useTranslation } from 'react-i18next';
 
-export const Advantages = () => {
+const Advantages = () => {
   const { t } = useTranslation();
   return (
     <ProductBenefitsWrapper>
@@ -70,3 +69,5 @@ export const Advantages = () => {
     </ProductBenefitsWrapper>
   );
 };
+
+export default Advantages;

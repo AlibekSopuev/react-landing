@@ -8,7 +8,7 @@ import { sendApplication } from '../../../services/sendApplication';
 import * as Yup from 'yup';
 import { useTranslation } from 'react-i18next';
 
-export const Application = () => {
+const Application = () => {
   const { t } = useTranslation();
   const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number[] }>({
     initialValues: { fullName: '', phoneNumber: '', investment: [1000] },
@@ -77,3 +77,5 @@ export const Application = () => {
     </Container>
   );
 };
+
+export default Application;

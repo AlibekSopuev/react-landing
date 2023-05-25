@@ -10,15 +10,14 @@ import {
   IconBlock,
   TextBlock,
   CardText,
-  Bulb,
 } from './styled';
-import { IconInstruction } from '../../../components/icons/iconInstruction';
+import bulbImage from 'src/assets/icons/bulb.png';
 import { IconFirst } from '../../../components/icons/iconFirst';
 import { IconSecond } from '../../../components/icons/iconSecond';
 import { IconThird } from '../../../components/icons/iconThird';
 import { useTranslation } from 'react-i18next';
 
-export const Instructions = () => {
+const Instructions = () => {
   const { t } = useTranslation();
 
   return (
@@ -29,7 +28,7 @@ export const Instructions = () => {
       </Title>
       <Container>
         <ImageWrapper>
-          <Bulb />
+          <img src={bulbImage} alt='' />
         </ImageWrapper>
         <CardsWrapper>
           <Card>
@@ -64,3 +63,5 @@ export const Instructions = () => {
     </Wrapper>
   );
 };
+
+export default Instructions;

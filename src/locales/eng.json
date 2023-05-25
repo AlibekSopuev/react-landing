@@ -32,9 +32,9 @@
     "interestPayment": "Interest payment",
     "rate": "",
     "period": "every 3 month",
-    "numberOfBonds:": "Number of bonds",
+    "numberOfBonds": "Number of bonds",
     "maturity": "Maturity",
-    "interestRate:": "Interest rate"
+    "interestRate": "Interest rate"
   },
   "advantages": {
     "title": "Benefits",

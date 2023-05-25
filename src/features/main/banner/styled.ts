@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  //max-width: 1200px;
+  //margin: 0 auto;
   width: 100%;
   padding: 250px 12px 120px;
   ${({ theme }) => css`
@@ -27,10 +29,9 @@ export const ImgBlock = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  svg {
+  img {
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.media.small}) {
-        max-width: 248px;
         width: 100%;
         padding: 28px 56px 0;
       }

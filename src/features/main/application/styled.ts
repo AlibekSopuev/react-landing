@@ -19,9 +19,7 @@ export const Container = styled.div`
   `}
 `;
 
-export const TextBlock = styled.div`
-  width: 50%;
-`;
+export const TextBlock = styled.div``;
 
 export const Title = styled.div`
   font-family: 'Fira Sans', sans-serif;
