@@ -7,9 +7,7 @@ function App() {
   return (
     <AppThemeProvider>
       <GlobalAppContainer>
-        <React.Suspense fallback='...загрузка'>
-          <Main />
-        </React.Suspense>
+        <Main />
       </GlobalAppContainer>
     </AppThemeProvider>
   );
