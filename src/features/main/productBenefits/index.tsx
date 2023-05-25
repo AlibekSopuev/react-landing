@@ -16,12 +16,14 @@ import { IconMoneyBag } from '../../../components/icons/iconMoneyBag';
 import { IconDeadline } from '../../../components/icons/iconDeadline';
 import { IconIncome } from '../../../components/icons/iconIncome';
 import { IconPerсent } from '../../../components/icons/iconPercent';
+import { useTranslation } from 'react-i18next';
 
 export const ProductBenefits = () => {
+  const { t } = useTranslation();
   return (
     <ProductBenefitsWrapper>
       <ProductBenefitsContainer>
-        <ProductBenefitsTitle>Инвестируйте на выгодных условиях</ProductBenefitsTitle>
+        <ProductBenefitsTitle>{t('productBenefits.title')}</ProductBenefitsTitle>
         <ProductBenefitsGrid>
           <ProductBenefitsCard>
             <ImgContainer>
@@ -29,7 +31,7 @@ export const ProductBenefits = () => {
                 <IconMoneySom />
               </BackGround>
             </ImgContainer>
-            <CardText>Номинальная стоимость</CardText>
+            <CardText>{t('productBenefits.nominalValue')}</CardText>
             <CardNumbers>1000 сом</CardNumbers>
           </ProductBenefitsCard>
           <ProductBenefitsCard>
@@ -38,7 +40,7 @@ export const ProductBenefits = () => {
                 <IconSecurities />
               </BackGround>
             </ImgContainer>
-            <CardText>Количество ценных бумаг</CardText>
+            <CardText>{t('productBenefits.numberOfBonds')}</CardText>
             <CardNumbers>85 000</CardNumbers>
           </ProductBenefitsCard>
           <ProductBenefitsCard>
@@ -47,7 +49,7 @@ export const ProductBenefits = () => {
                 <IconMoneyBag />
               </BackGround>
             </ImgContainer>
-            <CardText>Обьем выпуска</CardText>
+            <CardText>{t('productBenefits.volume')}</CardText>
             <CardNumbers>85 000 000 сом</CardNumbers>
           </ProductBenefitsCard>
           <ProductBenefitsCard>
@@ -56,7 +58,7 @@ export const ProductBenefits = () => {
                 <IconDeadline />
               </BackGround>
             </ImgContainer>
-            <CardText>Срок обращения</CardText>
+            <CardText>{t('productBenefits.maturity')}</CardText>
             <CardNumbers>3 года</CardNumbers>
           </ProductBenefitsCard>
           <ProductBenefitsCard>
@@ -65,8 +67,8 @@ export const ProductBenefits = () => {
                 <IconIncome />
               </BackGround>
             </ImgContainer>
-            <CardText>Доходность годовых</CardText>
-            <CardNumbers>16% </CardNumbers>
+            <CardText>{t('productBenefits.interestRate')}</CardText>
+            <CardNumbers>{t('productBenefits.rate')}</CardNumbers>
           </ProductBenefitsCard>
           <ProductBenefitsCard>
             <ImgContainer>
@@ -74,8 +76,8 @@ export const ProductBenefits = () => {
                 <IconPerсent />
               </BackGround>
             </ImgContainer>
-            <CardText>Выплата процентов</CardText>
-            <CardNumbers>каждые 3 месяца</CardNumbers>
+            <CardText>{t('productBenefits.interestPayment')}</CardText>
+            <CardNumbers>{t('productBenefits.period')}</CardNumbers>
           </ProductBenefitsCard>
         </ProductBenefitsGrid>
       </ProductBenefitsContainer>

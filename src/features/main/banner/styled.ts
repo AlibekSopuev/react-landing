@@ -3,6 +3,7 @@ import { IconBanner } from '../../../components/icons/iconBanner';
 
 export const Wrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 250px 12px 120px;
   ${({ theme }) => css`
@@ -14,7 +15,6 @@ export const Wrapper = styled.div`
 `;
 
 export const TextBlock = styled.div`
-  //padding-right: 200px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       align-items: center;

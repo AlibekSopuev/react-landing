@@ -62,7 +62,8 @@
     "ecoTourism": "Eco-tourism"
   },
   "instructions": {
-    "title": "How to invest in green bonds?",
+    "title": "How to invest in",
+    "subtitle": "green bonds?",
     "consultation":"Get a consultation",
     "consultationSubtitle":"We welcome questions at the office of the Finance Company “Senti” or any office of Doscredobank (valid passport is required).",
     "invest": "Invest",
@@ -73,7 +74,8 @@
   "application": {
     "title": "Invest now!",
     "subtitle": "Please leave your contact information to get back to you as soon as possible!",
-    "personalInfo": "By submitting an application, I agree to the processing of personal data"
+    "personalInfo": "By submitting an application,",
+    "personalInfoLink": "I agree to the processing of personal data"
   },
   "questions": {
     "title": "FAQ",

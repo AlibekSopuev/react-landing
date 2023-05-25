@@ -22,8 +22,10 @@ import { formatMoney } from '../../../helpers/utils';
 import { PhoneInputField } from '../../../components/ui/inputField/phone';
 import { InputField } from '../../../components/ui/inputField/main';
 import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
+import { useTranslation } from 'react-i18next';
 
 export const ModalForm = () => {
+  const { t } = useTranslation();
   const isMobile = useDeviceDetected();
   const [open, setOpen] = useState(false);
 
@@ -59,7 +61,7 @@ export const ModalForm = () => {
           setOpen(true);
         }}
       >
-        Я инвестирую
+        {t('modalForm.investButton')}
       </Button>
       <Modal
         open={open}
@@ -71,8 +73,8 @@ export const ModalForm = () => {
           <InputWrapper>
             {!isMobile && (
               <>
-                <Title>Оставить заявку</Title>
-                <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
+                <Title>{t('modalForm.modalTitle')}</Title>
+                <Text>{t('modalForm.modalSubtitle')}</Text>
               </>
             )}
             <form onSubmit={handleSubmit}>

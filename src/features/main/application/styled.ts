@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  justify-content: space-between;
   padding: 64px;
   width: 100%;
   max-width: 1200px;
@@ -18,7 +19,9 @@ export const Container = styled.div`
   `}
 `;
 
-export const TextBlock = styled.div``;
+export const TextBlock = styled.div`
+  width: 50%;
+`;
 
 export const Title = styled.div`
   font-family: 'Fira Sans', sans-serif;

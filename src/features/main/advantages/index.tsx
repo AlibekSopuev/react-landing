@@ -19,12 +19,14 @@ import { IconArrowRight } from '../../../components/icons/iconArrowRight';
 import { IconSafety } from '../../../components/icons/iconSafety';
 import { IconSale } from '../../../components/icons/iconSale';
 import { IconStability } from '../../../components/icons/iconStability';
+import { useTranslation } from 'react-i18next';
 
 export const Advantages = () => {
+  const { t } = useTranslation();
   return (
     <ProductBenefitsWrapper>
       <ProductBenefitsContainer>
-        <ProductBenefitsTitle>Преимущества</ProductBenefitsTitle>
+        <ProductBenefitsTitle>{t('advantages.title')}</ProductBenefitsTitle>
         <AdvantagesGrid>
           <Item1>
             <ImgContainer>
@@ -33,16 +35,16 @@ export const Advantages = () => {
               </BackGround>
             </ImgContainer>
             <TextContainer>
-              <AdvantagesTitle>Надёжность</AdvantagesTitle>
+              <AdvantagesTitle>{t('advantages.reliability')}</AdvantagesTitle>
               <AdvantagesText>
-                <div>Более 25 лет успешной работы на рынке банковских услуг КР</div>
-                <div> 50 офисов Банка по всему Кыргызстану</div>
-                <div> Более 800 сотрудников</div>
-                <div> Более 450 000 довольных клиентов</div>
+                <div>{t('advantages.reliabilitySubtitle.first')}</div>
+                <div>{t('advantages.reliabilitySubtitle.second')}</div>
+                <div>{t('advantages.reliabilitySubtitle.third')}</div>
+                <div>{t('advantages.reliabilitySubtitle.fourth')}</div>
               </AdvantagesText>
             </TextContainer>
             <Button target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
-              Подробнее о Банке <IconArrowRight />
+              {t('advantages.hrefButton')} <IconArrowRight />
             </Button>
           </Item1>
           <Item2>
@@ -51,8 +53,8 @@ export const Advantages = () => {
                 <IconSale />
               </BackGround>
             </ImgContainer>
-            <AdvantagesTitle>Высокая доходность</AdvantagesTitle>
-            <AdvantagesText>16% годовых (16,98 эффективная процентная ставка)</AdvantagesText>
+            <AdvantagesTitle>{t('advantages.interestRate')}</AdvantagesTitle>
+            <AdvantagesText>{t('advantages.interestRateSubtitle')}</AdvantagesText>
           </Item2>
           <Item3>
             <ImgContainer>
@@ -60,8 +62,8 @@ export const Advantages = () => {
                 <IconStability />
               </BackGround>
             </ImgContainer>
-            <AdvantagesTitle>Высокая доходность</AdvantagesTitle>
-            <AdvantagesText>16% годовых (16,98 эффективная процентная ставка)</AdvantagesText>
+            <AdvantagesTitle>{t('advantages.stability')}</AdvantagesTitle>
+            <AdvantagesText>{t('advantages.stabilitySubtitle')}</AdvantagesText>
           </Item3>
         </AdvantagesGrid>
       </ProductBenefitsContainer>

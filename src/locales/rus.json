@@ -24,19 +24,19 @@
     "minimumAmount": "Минимальная сумма — 1 000 с"
   },
   "productBenefits": {
-    "title": "Invest on beneficial terms",
-    "nominalValue": "Nominal value",
-    "volume": "Volume",
-    "interestPayment": "Interest payment",
+    "title": "Инвестируйте на выгодных условиях",
+    "nominalValue": "Номинальная стоимость",
+    "volume": "Обьем выпуска",
+    "interestPayment": "Выплата процентов",
     "rate": "16% годовых ",
     "period": "каждые 3 месяца",
-    "numberOfBonds:": "Количество ценных бумаг",
+    "numberOfBonds": "Количество ценных бумаг",
     "maturity": "Срок обращения",
-    "interestRate:": "Доходность"
+    "interestRate": "Доходность"
   },
   "advantages": {
-    "title": "Надёжность",
-    "reliability": "Reliability",
+    "title": "Преимущества",
+    "reliability": "Надёжность",
     "reliabilitySubtitle":{
       "first":"Более 25 лет успешной работы на рынке банковских услуг КР",
       "second": "58 офисов Банка по всему Кыргызстану",
@@ -55,12 +55,13 @@
     "electricCars": "Электрокары",
     "solarPanels": "Солнечные панели",
     "dripIrrigation": "Капельное орошение",
-    "energyEfficientBuilding": "Энергоэффективный дом",
+    "energyEfficientBuilding": "Энерго эффективный дом",
     "organicFarming": "Сельское хозяйство",
     "ecoTourism": "Эко туризм"
   },
   "instructions": {
-    "title": "Как инвестировать в Зелёные облигации?",
+    "title": "Как инвестировать в",
+    "subtitle": "Зелёные облигации?",
     "consultation":"Получите консультацию",
     "consultationSubtitle":"Вы можете обратиться в офис ФК «Сенти» или в любой офис «Дос-Кредобанк» (при себе достаточно иметь паспорт)",
     "invest": "Инвестируйте",
@@ -71,6 +72,7 @@
   "application": {
     "title": "Инвестировать прямо сейчас!",
     "subtitle": "Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время",
-    "personalInfo": "Оставляя заявку, я соглашаюсь на обработку персональных данных"
+    "personalInfo": "Оставляя заявку, я соглашаюсь на",
+    "personalInfoLink": "обработку персональных данных"
   }
 }
