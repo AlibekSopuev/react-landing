@@ -1,10 +1,9 @@
 import React from 'react';
-import { RouterProvider } from 'react-router';
-import AppRouter from './router/router';
 import { GlobalStyle } from './styles/global';
 import { AppThemeProvider } from './context/themeContetxt';
 import { AppLayoutProvider } from './context/layoutContext';
 import { GlobalAppContainer } from './components/ui/appContainer';
+import Main from './features/main';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <GlobalAppContainer>
           <GlobalStyle />
           <React.Suspense fallback='...загрузка'>
-            <RouterProvider router={AppRouter} />
+            <Main />
           </React.Suspense>
         </GlobalAppContainer>
       </AppThemeProvider>
