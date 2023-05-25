@@ -67,6 +67,7 @@ export const PhoneNumber = styled.a`
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #121112;
+  text-decoration: none;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 14px;
