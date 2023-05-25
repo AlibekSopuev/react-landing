@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { LangSwitcher } from '../../../components/shared/langSwitcher';
 
 export const Header = styled.header`
@@ -18,6 +18,11 @@ export const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 0;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 16px;
+    }
+  `}
 `;
 
 export const HeaderBottom = styled.div`
@@ -26,11 +31,33 @@ export const HeaderBottom = styled.div`
   align-items: center;
 `;
 
+export const HeaderTop = styled.div`
+  background: #f2f2f2;
+  box-shadow: 0 4px 24px rgba(176, 176, 204, 0.08);
+  padding: 16px;
+`;
+
+export const LogoTop = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 8px;
+    max-width: 70px;
+  }
+`;
+
 export const DesktopLogoCover = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  svg {
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        max-width: 250px;
+      }
+    `}
+  }
 `;
 
 export const PhoneNumber = styled.a`
@@ -40,6 +67,12 @@ export const PhoneNumber = styled.a`
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #121112;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  `}
 `;
 
 export const RightContent = styled.div`

@@ -21,8 +21,10 @@ import { Input } from '../../../components/ui/input';
 import { formatMoney } from '../../../helpers/utils';
 import { PhoneInputField } from '../../../components/ui/inputField/phone';
 import { InputField } from '../../../components/ui/inputField/main';
+import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
 
 export const ModalForm = () => {
+  const isMobile = useDeviceDetected();
   const [open, setOpen] = useState(false);
 
   const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number[] }>({
@@ -67,8 +69,12 @@ export const ModalForm = () => {
       >
         <Container>
           <InputWrapper>
-            <Title>Оставить заявку</Title>
-            <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
+            {!isMobile && (
+              <>
+                <Title>Оставить заявку</Title>
+                <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
+              </>
+            )}
             <form onSubmit={handleSubmit}>
               <InputField placeholder='Ваше имя' name='fullName' value={fullName} onChange={handleChange} />
               <PhoneInputField onChange={(values) => setFieldValue('phoneNumber', values)} type='phone' />
@@ -82,6 +88,12 @@ export const ModalForm = () => {
             </form>
           </InputWrapper>
           <CalculationsWrapper>
+            {isMobile && (
+              <>
+                <Title>Оставить заявку</Title>
+                <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
+              </>
+            )}
             <Block>
               <CalculationTitles>Количество облигаций</CalculationTitles>
               <Numbers>{bondsAmount}</Numbers>

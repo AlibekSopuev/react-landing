@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { IconCross } from '../../icons/iconCross';
 
 export const ModalWrapper = styled.div`
@@ -41,6 +41,14 @@ export const ModalContent = styled.div`
   min-width: 859px;
   max-width: 400px;
   text-align: center;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      width: 100%;
+      max-width: 429px;
+      min-width: 250px;
+      padding: 32px 24px;
+    }
+  `}
 `;
 
 export const ModalHeader = styled.div`

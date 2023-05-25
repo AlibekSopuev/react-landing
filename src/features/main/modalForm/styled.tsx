@@ -21,12 +21,25 @@ export const StyledButton = styled(Button)`
 `;
 export const Container = styled.div`
   display: flex;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      flex-direction: column-reverse;
+    }
+  `}
 `;
 
 export const InputWrapper = styled.div`
   border-right: #ebebeb 1px solid;
   padding-right: 48px;
   max-width: 500px;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      border-right: none;
+      padding-right: 0;
+    }
+  `}
 `;
 
 export const CalculationsWrapper = styled.div`
@@ -34,6 +47,14 @@ export const CalculationsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding-left: 0;
+      flex-wrap: wrap;
+      flex-direction: initial;
+    }
+  `}
 `;
 
 export const CalculationTitles = styled.div`
@@ -51,10 +72,27 @@ export const Numbers = styled.div`
   font-size: 28px;
   line-height: 120%;
   color: #121112;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-size: 24px;
+    }
+  `}
 `;
 
 export const Block = styled.div`
   text-align: left;
+  width: 100%;
+  max-width: 240px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      max-width: 135px;
+      margin-bottom: 24px;
+      :last-child {
+        max-width: 382px;
+      }
+    }
+  `}
 `;
 
 export const Title = styled.div`
@@ -81,4 +119,12 @@ export const Text = styled.div`
   letter-spacing: 0.15px;
   color: #616163;
   margin-bottom: 24px;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  `}
 `;

@@ -13,7 +13,7 @@ const Modal: FC<ModalProps> = ({ open, onClose, children }) => {
 
   return (
     <ModalWrapper className={'fadeIn'}>
-      <ModalBackDrop />
+      <ModalBackDrop onClick={onClose} />
       <ModalContent>
         <StyledCrossIcon onClick={onClose} />
         {children}
