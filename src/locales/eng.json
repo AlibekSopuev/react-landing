@@ -8,15 +8,17 @@
   "modalForm": {
     "investButton": "I invest",
     "modalTitle": "Submit your application",
-    "modalSubtitle": "Please leave your contact information to get back to you as soon as possible!"
+    "modalSubtitle": "Please leave your contact information to get back to you as soon as possible!",
+    "maturity": "Maturity",
+    "totalInvestment": "Total investment"
   },
  "global": {
    "investmentAmount":"Investment amount",
    "numberOfBonds:": "Number of bonds:",
-   "interestRate:": "Interest rate",
+   "interestRate": "Interest rate",
    "maturity": "Maturity",
-   "quarterlyIncome:": "Quarterly income",
-   "totalInvestment:": "Total investment",
+   "quarterlyIncome": "Quarterly income",
+   "totalInvestment": "Total investment",
    "currency": "KGS",
    "maturityAmount": "years",
    "yourName": "Your name",
@@ -116,7 +118,14 @@
       "sentiWebSite": "Web-site:",
       "dcbName": "OJSC “Doscredobank”",
       "dcbAddress": "Address: 92, Chui Ave, Bishkek, -1st floor",
-      "dcbTelephone": "Telephone:"
+      "branches": "You can find the bank’s branch addresses",
+      "branchesLink": "here"
     }
+  },
+  "footer": {
+    "history": "1997-2023 © Dos Credobank OJSC. License of NB KR №037",
+    "headOffice": "Head office",
+    "republic": "Kyrgyz Republic",
+    "address": "Bishkek, Chuy avenue, 92, 6 fl"
   }
 }

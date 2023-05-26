@@ -1,98 +1,88 @@
 import React from 'react';
 import { BoxList, Container, Text, TextWithMargin, Title } from './styled';
 import { Accordion } from '../../../components/ui/accordion';
+import { useTranslation } from 'react-i18next';
 
 const Questions = () => {
+  const { t, i18n } = useTranslation();
   return (
     <Container>
-      <Title>Часто задаваемые вопросы</Title>
-      <Accordion title={'Что такое зеленые облигации?'}>
-        <TextWithMargin>
-          Зеленые облигации - Согласно определению Международной ассоциации рынков капитала (ICMA), зеленые облигации
-          представляют собой любые ценные долговые бумаги, поступления от которых направляются на финансирование или
-          рефинансирование зеленых проектов.
-        </TextWithMargin>
-        <Text>
-          Зеленые облигации Doscredobank - это ценные бумаги стабильной, динамично развивающейся и надёжной компании,
-          обеспечивающие дополнительный высокий доход на ежеквартальной основе.
-        </Text>
+      <Title>{t('questions.title')}</Title>
+      <Accordion title={t('questions.greenBonds.title')}>
+        <TextWithMargin>{t('questions.greenBonds.descriptionFirst')}</TextWithMargin>
+        <Text>{t('questions.greenBonds.descriptionSecond')}</Text>
       </Accordion>
-      <Accordion title={'Кто такой эмитент?'}>
-        <Text>
-          Компания, выпустившая ценные бумаги, получившая для этого разрешение на выпуск ценных бумаг Службы
-          регулирования и надзора за финансовым рынком при Министерстве экономики и коммерции КР.
-        </Text>
+      <Accordion title={t('questions.bondIssuer.title')}>
+        <Text>{t('questions.bondIssuer.description')}</Text>
       </Accordion>
-      <Accordion title={'В чем преимущества зеленых облигаций для инвесторов?'}>
+      <Accordion title={t('questions.advantages.title')}>
         <BoxList>
           <li>
-            <Text>
-              Возможность финансировать проекты экологической направленности с прозрачным и отслеживаемым путем
-              использования средств;
-            </Text>
+            <Text>{t('questions.advantages.descriptionFirst')}</Text>
           </li>
           <li>
-            <Text>Достижение своих ESG – целей;</Text>
+            <Text> {t('questions.advantages.descriptionSecond')}</Text>
           </li>
           <li>
-            <Text>
-              Упрочение репутации инвестора как экологически ответственной организации, инвестирующей в проекты
-              устойчивого развития;
-            </Text>
+            <Text> {t('questions.advantages.descriptionThird')}</Text>
           </li>
           <li>
-            <Text>
-              Учет инвесторами факторов устойчивого развития при принятии инвестиционных решений является дополнительным
-              инструментом своевременного выявления возможных инвестиционных рисков в долгосрочной перспективе.
-            </Text>
+            <Text>{t('questions.advantages.descriptionFourth')}</Text>
           </li>
         </BoxList>
       </Accordion>
-      <Accordion title={'В каком виде выпускаются облигации?'}>
-        <Text>
-          По действующему законодательству облигации выпускаются только в бездокументарной форме – в виде записей в
-          реестре у независимого реестродержателя.
-        </Text>
+      <Accordion title={t('questions.bondMethods.title')}>
+        <Text>{t('questions.bondMethods.description')}</Text>
       </Accordion>
-      <Accordion title={'Как получить процентные доходы по облигациям?'}>
-        <Text>
-          Проценты по облигациям в размере 16% годовых начисляются ежеквартально на расчетный счет с возможностью снятия
-          наличными либо перечислением на банковскую карту.
-        </Text>
+      <Accordion title={t('questions.receiveInterest.title')}>
+        <Text>{t('questions.receiveInterest.description')}</Text>
       </Accordion>
-      <Accordion title={'Возможен ли досрочный выкуп эмитентом собственных облигаций?'}>
-        <Text>
-          Условия и сроки данной процедуры указаны в проспекте эмиссии и условиях публичного предложения облигаций
-          соответствующего эмитента.
-        </Text>
+      <Accordion title={t('questions.buyback.title')}>
+        <Text>{t('questions.buyback.description')}</Text>
       </Accordion>
-      <Accordion title={'Где можно получить подробную информацию по зеленым облигациям Doscredobank?'}>
+      <Accordion title={t('questions.contacts.title')}>
+        <TextWithMargin>{t('questions.contacts.description')}</TextWithMargin>
         <TextWithMargin>
-          Получить более подробную информацию об облигациях, Вы можете обратившись с паспортом в офис Финансовой
-          компании «Сенти», либо в любой из ближайших офисов Doscredobank.
-        </TextWithMargin>
-        <TextWithMargin>
-          <span>ФК «Сенти»</span>
-          <div> Адрес: Пр. Чуй, 219, 9 этаж</div>
-          <div>Телефон: +996 (312) 61 45 89</div> <div> WhatsApp: +996 (700) 61 00 25</div>
+          <span>{t('questions.contacts.sentiName')}</span>
+          <div>{t('questions.contacts.sentiAddress')}</div>
+          <div>{t('questions.contacts.sentiTelephone')} +996 (312) 61 45 89</div>
+          <div> WhatsApp: +996 (700) 61 00 25</div>
           <div>
-            Веб-сайт:{' '}
+            {t('questions.contacts.sentiWebSite')}{' '}
             <a target='_blank' rel='noreferrer' href={'https://senti.kg/'}>
               www.senti.kg
             </a>
           </div>
         </TextWithMargin>
         <Text>
-          <span>АО «Дос-Кредобанк»</span>
-          <div>Адрес: г. Бишкек, пр. Чуй 92, ГУМ «Чынар», -1 этаж</div>
-          <div>Телефон: 8686 (звонок с мобильного бесплатный)</div>
+          <span>{t('questions.contacts.dcbName')}</span>
+          <div>{t('questions.contacts.dcbAddress')}</div>
+          <div>{t('questions.contacts.sentiTelephone')} 8686 (звонок с мобильного бесплатный)</div>
           <div>
-            Веб-сайт:{' '}
+            {t('questions.contacts.sentiWebSite')}{' '}
             <a target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
               www.dcb.kg
             </a>
           </div>
-          <div> Узнать адреса отделений банка Вы можете здесь</div>
+          <div>
+            {i18n.language === 'kyrgyz' && (
+              <div>
+                {t('questions.contacts.branches')}{' '}
+                <a target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/terminals/departments'}>
+                  {t('questions.contacts.branchesLink')}
+                </a>
+                {t('questions.contacts.branchesLast')}
+              </div>
+            )}{' '}
+            {i18n.language !== 'kyrgyz' && (
+              <div>
+                {t('questions.contacts.branches')}{' '}
+                <a target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/terminals/departments'}>
+                  {t('questions.contacts.branchesLink')}
+                </a>
+              </div>
+            )}
+          </div>
         </Text>
       </Accordion>
     </Container>

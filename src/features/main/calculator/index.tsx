@@ -14,8 +14,10 @@ import {
 } from './styled';
 import { InvestmentSlider } from 'src/components/shared/investmentSlider';
 import { formatMoney } from 'src/helpers/utils';
+import { useTranslation } from 'react-i18next';
 
 const Calculator = () => {
+  const { t } = useTranslation();
   const [investment, setInvestment] = useState([1000]);
 
   const handleChange = (newValues: number[]) => {
@@ -32,30 +34,34 @@ const Calculator = () => {
         <InvestmentSlider amount={investment} onChange={handleChange} min={1000} max={1000000} />
         <ValuesContainer>
           <FromToValues>
-            <StyledTypography variant={'body_a'}>На период</StyledTypography>
-            <StyledTypography variant={'body_a'}>3 года</StyledTypography>
+            <StyledTypography variant={'body_a'}>{t('global.maturity')}</StyledTypography>
+            <StyledTypography variant={'body_a'}>3{t('global.maturityAmount')}</StyledTypography>
           </FromToValues>
         </ValuesContainer>
       </CalculatorWrapper>
       <BlocksWrapper>
         <BlockContainer>
           <Block>
-            <Title>Количество облигаций:</Title>
+            <Title>{t('global.numberOfBonds')}</Title>
             <Number>{bondsAmount}</Number>
           </Block>
           <Block>
-            <Title>Процент годовых:</Title>
+            <Title>{t('global.interestRate')}</Title>
             <Number>16%</Number>
           </Block>
         </BlockContainer>
         <BlockContainer>
           <Block>
-            <Title>Ежеквартальный доход:</Title>
-            <Number>{quarterIncome} сом</Number>
+            <Title>{t('global.quarterlyIncome')}</Title>
+            <Number>
+              {quarterIncome} {t('global.currency')}
+            </Number>
           </Block>
           <LastBlock>
-            <Title>Сумма в конце срока:</Title>
-            <Number>{finalSum} сом</Number>
+            <Title>{t('global.totalInvestment')}</Title>
+            <Number>
+              {finalSum} {t('global.currency')}
+            </Number>
           </LastBlock>
         </BlockContainer>
       </BlocksWrapper>

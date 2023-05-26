@@ -12,8 +12,10 @@ import {
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
 import { IconSocialMedias } from '../../../components/icons/iconSocialMedias';
+import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <FooterCover>
       <Container>
@@ -25,14 +27,14 @@ export const Footer: React.FC = () => {
             <IconSocialMedias />
           </BottomContentBox>
           <BankInfoBox>
-            <BankLicense>1997-2023 © ОАО &quot;Дос-Кредобанк&quot; Лиц. НБКР №037 </BankLicense>
+            <BankLicense>{t('footer.history')}</BankLicense>
           </BankInfoBox>
           <BottomContentBox style={{ marginRight: 0 }}>
             <Label href={'https://www.dcb.kg/ru/'}>dcb.kg</Label>
-            <BottomContentBoxText>Головной офис</BottomContentBoxText>
+            <BottomContentBoxText>{t('footer.headOffice')}</BottomContentBoxText>
             <BottomContentBoxText>720000</BottomContentBoxText>
-            <BottomContentBoxText>Кыргызская Республика</BottomContentBoxText>
-            <BottomContentBoxText>г. Бишкек, пр.Чуй, 92 ГУМ, 6 этаж</BottomContentBoxText>
+            <BottomContentBoxText>{t('footer.republic')}</BottomContentBoxText>
+            <BottomContentBoxText>{t('footer.address')}</BottomContentBoxText>
           </BottomContentBox>
         </FooterBottom>
       </Container>

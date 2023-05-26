@@ -78,7 +78,12 @@ const ModalForm = () => {
               </>
             )}
             <form onSubmit={handleSubmit}>
-              <InputField placeholder='Ваше имя' name='fullName' value={fullName} onChange={handleChange} />
+              <InputField
+                placeholder={t('global.yourName') as string}
+                name='fullName'
+                value={fullName}
+                onChange={handleChange}
+              />
               <PhoneInputField onChange={(values) => setFieldValue('phoneNumber', values)} type='phone' />
               <InvestmentSlider
                 amount={investment}
@@ -86,35 +91,42 @@ const ModalForm = () => {
                 min={1000}
                 max={1000000}
               />
-              <StyledButton type='submit'>Оставить заявку</StyledButton>
+              <StyledButton type='submit'>{t('global.buttonSubmit')}</StyledButton>
             </form>
           </InputWrapper>
           <CalculationsWrapper>
             {isMobile && (
               <>
-                <Title>Оставить заявку</Title>
-                <Text>Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время</Text>
+                <Title>{t('modalForm.modalTitle')}</Title>
+                <Text>
+                  {t('modalForm.modalSubtitle')}
+                  {t('modalForm.modalSubtitle')}
+                </Text>
               </>
             )}
             <Block>
-              <CalculationTitles>Количество облигаций</CalculationTitles>
+              <CalculationTitles>{t('global.numberOfBonds')}</CalculationTitles>
               <Numbers>{bondsAmount}</Numbers>
             </Block>
             <Block>
-              <CalculationTitles>Процент годовых</CalculationTitles>
+              <CalculationTitles>{t('global.interestRate')}</CalculationTitles>
               <Numbers>16%</Numbers>
             </Block>
             <Block>
-              <CalculationTitles>Срок</CalculationTitles>
-              <Numbers>3 года</Numbers>
+              <CalculationTitles>{t('modalForm.maturity')}</CalculationTitles>
+              <Numbers>3 {t('global.maturityAmount')}</Numbers>
             </Block>
             <Block>
-              <CalculationTitles>Ежеквартальный доход</CalculationTitles>
-              <Numbers>{quarterIncome} сом</Numbers>
+              <CalculationTitles>{t('global.quarterlyIncome')}</CalculationTitles>
+              <Numbers>
+                {quarterIncome} {t('global.currency')}
+              </Numbers>
             </Block>
             <Block>
-              <CalculationTitles>Общий обьем инвестиций</CalculationTitles>
-              <Numbers>{finalSum} сом</Numbers>
+              <CalculationTitles>{t('modalForm.totalInvestment')}</CalculationTitles>
+              <Numbers>
+                {finalSum} {t('global.currency')}
+              </Numbers>
             </Block>
           </CalculationsWrapper>
         </Container>

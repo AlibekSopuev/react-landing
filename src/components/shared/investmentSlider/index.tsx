@@ -5,9 +5,11 @@ import { IRangeSliderProps } from 'src/components/ui/rangeSlider/types';
 import { formatMoney } from 'src/helpers/utils';
 import { Input } from '../../ui/input';
 import { MoneyInputField } from '../../ui/inputField/money';
+import { useTranslation } from 'react-i18next';
 
 export const InvestmentSlider: React.FC<IRangeSliderProps> = ({ onChange, min, max }) => {
   const [amount, setAmount] = useState([1000]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     onChange(amount);
@@ -16,7 +18,7 @@ export const InvestmentSlider: React.FC<IRangeSliderProps> = ({ onChange, min, m
   return (
     <ValuesContainer>
       <FromToValues>
-        <StyledTypography variant='body_a'>Сумма инвестирования</StyledTypography>
+        <StyledTypography variant='body_a'>{t('global.investmentAmount')}</StyledTypography>
         <StyledTypography variant='body_a'>{formatMoney(amount[0]) + ' c'}</StyledTypography>
         {/* <Input*/}
         {/*  name='investment'*/}
