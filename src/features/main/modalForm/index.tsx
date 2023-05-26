@@ -79,12 +79,21 @@ const ModalForm = () => {
             )}
             <form onSubmit={handleSubmit}>
               <InputField
+                floatLabel
+                label={t('global.yourName') as string}
                 placeholder={t('global.yourName') as string}
                 name='fullName'
                 value={fullName}
                 onChange={handleChange}
               />
-              <PhoneInputField onChange={(values) => setFieldValue('phoneNumber', values)} type='phone' />
+              <PhoneInputField
+                floatLabel
+                label={t('global.number') as string}
+                placeholder={t('global.number') as string}
+                onChange={(values) => setFieldValue('phoneNumber', values)}
+                type='phone'
+                defaultValue={phoneNumber}
+              />
               <InvestmentSlider
                 amount={investment}
                 onChange={(values) => setFieldValue('investment', values)}

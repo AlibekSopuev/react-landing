@@ -7,6 +7,8 @@ import { useFormik } from 'formik';
 import { sendApplication } from '../../../services/sendApplication';
 import * as Yup from 'yup';
 import { useTranslation } from 'react-i18next';
+import { PhoneInputField } from '../../../components/ui/inputField/phone';
+import { InputField } from '../../../components/ui/inputField/main';
 
 const Application = () => {
   const { t } = useTranslation();
@@ -40,14 +42,21 @@ const Application = () => {
         <CalculatorWrapper>
           <form onSubmit={handleSubmit}>
             <InputWrapper>
-              <Input name='fullName' onChange={handleChange} value={fullName} label='Ваше имя' />
-              <Input
-                name='phoneNumber'
+              <InputField
+                floatLabel
+                label='Ваше имя'
+                placeholder='Ваше имя'
+                name='fullName'
+                value={fullName}
+                onChange={handleChange}
+              />
+              <PhoneInputField
+                floatLabel
+                label={t('global.number') as string}
+                placeholder={t('global.number') as string}
                 onChange={(values) => setFieldValue('phoneNumber', values)}
-                value={phoneNumber}
-                label='Ваш номер телефона'
-                mask={'+{996}000000000'}
-                isMasked
+                type='phone'
+                defaultValue={phoneNumber}
               />
             </InputWrapper>
             <InvestmentSlider

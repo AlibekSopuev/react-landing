@@ -34,6 +34,10 @@ export const InputWrapper = styled.div`
   padding-right: 48px;
   max-width: 500px;
 
+  form > div {
+    margin-bottom: 16px;
+  }
+
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       border-right: none;

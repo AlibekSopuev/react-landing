@@ -51,7 +51,7 @@ export const StyledInput = styled.input`
 
 export const InputWrapper = styled.div<{ floatLabel?: boolean }>`
   position: relative;
-  background: ${({ theme }) => theme.colors.grey.disabled.grey100};
+  background: ${({ theme }) => theme.colors.grey.primary_inverted.grey50};
   border: solid 2px ${({ theme }) => theme.colors.grey.disabled.grey100};
   gap: 4px;
   display: flex;
@@ -67,7 +67,7 @@ export const InputWrapper = styled.div<{ floatLabel?: boolean }>`
   }
 
   &:focus-within {
-    border: solid 2px ${({ theme }) => theme.colors.primary.light100};
+    border: solid 2px ${({ theme }) => theme.colors.track.light};
     background: ${({ theme }) => theme.colors.grey.primary_inverted.grey0};
   }
 

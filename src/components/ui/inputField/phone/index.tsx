@@ -1,15 +1,15 @@
-import React from 'react'
-import { InputMask } from '../mask'
-import { InputFieldBase } from '../base'
-import { InputLabel } from '../label'
-import { PhoneInputFieldProps } from './types'
+import React from 'react';
+import { InputMask } from '../mask';
+import { InputFieldBase } from '../base';
+import { InputLabel } from '../label';
+import { PhoneInputFieldProps } from './types';
 
-const PHONE_MASK = '+{996} (000) 000-000'
+const PHONE_MASK = '+{996} (000) 000-000';
 
 export const PhoneInputField: React.FC<PhoneInputFieldProps> = ({
   label,
   onChange,
-  placeholder = 'Номер телефона',
+  placeholder,
   className,
   ...props
 }) => (
@@ -22,4 +22,4 @@ export const PhoneInputField: React.FC<PhoneInputFieldProps> = ({
       </InputLabel>
     )}
   />
-)
+);

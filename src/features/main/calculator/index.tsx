@@ -35,7 +35,7 @@ const Calculator = () => {
         <ValuesContainer>
           <FromToValues>
             <StyledTypography variant={'body_a'}>{t('global.maturity')}</StyledTypography>
-            <StyledTypography variant={'body_a'}>3{t('global.maturityAmount')}</StyledTypography>
+            <StyledTypography variant={'body_a'}>3 {t('global.maturityAmount')}</StyledTypography>
           </FromToValues>
         </ValuesContainer>
       </CalculatorWrapper>

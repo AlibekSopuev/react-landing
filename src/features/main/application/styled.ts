@@ -19,7 +19,15 @@ export const Container = styled.div`
   `}
 `;
 
-export const TextBlock = styled.div``;
+export const TextBlock = styled.div`
+  width: 60%;
+  margin-right: 75px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      width: 100%;
+    }
+  `}
+`;
 
 export const Title = styled.div`
   font-family: 'Fira Sans', sans-serif;
@@ -62,11 +70,25 @@ export const FormBlock = styled.div`
 export const InputWrapper = styled.div`
   display: flex;
   gap: 8px;
+
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       display: block;
     }
   `}
+
+  & > div {
+    margin-bottom: 16px;
+  }
+
+  & > div {
+    width: 50%;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        width: 100%;
+      }
+    `}
+  }
 `;
 
 export const CalculatorWrapper = styled.div`
