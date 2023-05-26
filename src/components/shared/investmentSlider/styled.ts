@@ -46,6 +46,14 @@ export const StyledInputField = styled(InputField)`
     .input {
       text-align: right;
     }
+    .input::-webkit-outer-spin-button,
+    .input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    .input[type='number'] {
+      -moz-appearance: textfield;
+    }
   }
 `;
 

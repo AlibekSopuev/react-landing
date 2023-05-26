@@ -25,7 +25,7 @@ export const InvestmentSlider: React.FC<IRangeSliderProps> = ({ onChange, min, m
     <ValuesContainer>
       <FromToValues>
         <StyledTypography variant='body_a'>{t('global.investmentAmount')}</StyledTypography>
-        <StyledInputField value={amount[0]} onChange={(event) => setInvestment(event.target.value)} />
+        <StyledInputField type='number' value={amount[0]} onChange={(event) => setInvestment(event.target.value)} />
         &nbsp;<span>c</span>
         {/* <Input*/}
         {/*  name='investment'*/}
