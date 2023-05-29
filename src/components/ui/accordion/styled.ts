@@ -49,4 +49,6 @@ export const AccordionTitle = styled.div`
   `}
 `;
 
-export const Child = styled.div``;
+export const Child = styled.div`
+  margin-top: 24px;
+`;
