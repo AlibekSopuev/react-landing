@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 import { LangSwitcher } from '../../../components/shared/langSwitcher';
+import { IconDCBGreen } from '../../../components/icons/iconDCBGreen';
+import { IconInitiativeEn } from '../../../components/icons/iconInitiativeEn';
+import { IconInitiativeRu } from '../../../components/icons/iconInitiativeRu';
+import { IconInitiativeKyrgyz } from '../../../components/icons/iconInitiativeKyrgyz';
 
 export const Header = styled.header`
   width: 100%;
@@ -60,6 +64,37 @@ export const DesktopLogoCover = styled.div`
   }
 `;
 
+export const StyledDCBGreen = styled(IconDCBGreen)`
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      width: 157px;
+    }
+  `}
+`;
+
+export const StyledInitEn = styled(IconInitiativeEn)`
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      width: 94.15px;
+    }
+  `}
+`;
+
+export const StyledInitRu = styled(IconInitiativeRu)`
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      width: 94.15px;
+    }
+  `}
+`;
+export const StyledInitKyrgyz = styled(IconInitiativeKyrgyz)`
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      width: 94.15px;
+    }
+  `}
+`;
+export const LogoWrapper = styled.div``;
 export const PhoneNumber = styled.a`
   font-family: 'PT Root UI', sans-serif;
   font-weight: 700;

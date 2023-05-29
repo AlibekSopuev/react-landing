@@ -7,8 +7,13 @@ export const ProductBenefitsWrapper = styled.div`
   align-items: center;
 `;
 export const ProductBenefitsContainer = styled.div`
-  padding: 80px 10px;
+  padding: 80px 0;
   width: 100%;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 56px 16px 48px;
+    }
+  `}
 `;
 
 export const ProductBenefitsTitle = styled.div`
@@ -25,6 +30,7 @@ export const ProductBenefitsTitle = styled.div`
       font-size: 28px;
       line-height: 130%;
       letter-spacing: 0.25px;
+      margin-bottom: 40px;
     }
   `}
 `;
@@ -32,7 +38,7 @@ export const ProductBenefitsTitle = styled.div`
 export const ProductBenefitsGrid = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(283px, 1fr));
   gap: 24px;
   width: 100%;
   ${({ theme }) => css`
@@ -49,7 +55,7 @@ export const ProductBenefitsCard = styled.div`
   align-items: flex-start;
   padding: 32px;
   max-width: 384px;
-  max-height: 218px;
+  height: 218px;
   background: #ffffff;
   border: 5px;
   box-shadow: 0 4px 100px rgba(50, 160, 113, 0.02);
@@ -58,6 +64,7 @@ export const ProductBenefitsCard = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       padding: 16px;
+      height: 164px;
     }
   `}
 `;
@@ -72,6 +79,7 @@ export const CardText = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 14px;
+      margin-bottom: 8px;
     }
   `}
 `;
@@ -93,6 +101,11 @@ export const CardNumbers = styled.div`
 
 export const ImgContainer = styled.div`
   margin-bottom: 32px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-bottom: 16px;
+    }
+  `}
   img {
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.media.small}) {

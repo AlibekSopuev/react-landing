@@ -13,7 +13,7 @@ export const Container = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       display: block;
-      padding: 56px 16px;
+      padding: 56px 16px 48px;
       margin-bottom: 0;
     }
   `}

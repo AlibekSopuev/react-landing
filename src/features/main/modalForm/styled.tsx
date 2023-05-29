@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 import Button from '../../../components/ui/button';
 
 export const Wrapper = styled.div`
-  padding: 80px 120px;
+  padding: 48px 0 80px;
   width: 100%;
   display: flex;
   justify-content: center;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
-      padding: 32px 56px 48px;
+      padding: 32px 0 48px;
     }
   `}
   & > button {

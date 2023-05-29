@@ -9,12 +9,23 @@ import {
   StyledLangSwitcher,
   HeaderTop,
   LogoTop,
+  LogoWrapper,
+  StyledDCBGreen,
+  StyledInitKyrgyz,
+  StyledInitEn,
+  StyledInitRu,
 } from './styled';
 import { IconLogo } from '../../../components/icons/iconLogo';
 import { IconSentiLogo } from '../../../components/icons/iconSentiLogo';
 import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
+import { IconDCBGreen } from '../../../components/icons/iconDCBGreen';
+import { useTranslation } from 'react-i18next';
+import { IconInitiativeKyrgyz } from '../../../components/icons/iconInitiativeKyrgyz';
+import { IconInitiativeEn } from '../../../components/icons/iconInitiativeEn';
+import { IconInitiativeRu } from '../../../components/icons/iconInitiativeRu';
 
 export const AppHeader = () => {
+  const { i18n } = useTranslation();
   const isMobile = useDeviceDetected();
   return (
     <Header>
@@ -29,7 +40,12 @@ export const AppHeader = () => {
       <Container>
         <HeaderBottom>
           <DesktopLogoCover>
-            <IconLogo />
+            <LogoWrapper>
+              <StyledDCBGreen />
+              {i18n.language === 'kyrgyz' && <StyledInitKyrgyz />}
+              {i18n.language === 'eng' && <StyledInitEn />}
+              {i18n.language === 'rus' && <StyledInitRu />}
+            </LogoWrapper>
             {!isMobile && (
               <RightContent>
                 <IconSentiLogo />

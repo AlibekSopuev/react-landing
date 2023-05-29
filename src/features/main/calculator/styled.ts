@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin: 0 auto;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
-      padding: 40px 16px;
+      padding: 40px 16px 16px;
     }
   `}
 `;

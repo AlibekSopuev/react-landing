@@ -6,16 +6,18 @@ export const Wrapper = styled.div`
   //max-width: 1200px;
   //margin: 0 auto;
   width: 100%;
-  padding: 250px 12px 120px;
+  padding: 235px 0 64px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       display: block;
-      padding: 250px 16px 40px;
+      padding: 196px 16px 40px;
     }
   `}
 `;
 
 export const TextBlock = styled.div`
+  width: 100%;
+  max-width: 700px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       align-items: center;
