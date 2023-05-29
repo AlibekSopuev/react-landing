@@ -18,20 +18,25 @@ import { useTranslation } from 'react-i18next';
 
 const Calculator = () => {
   const { t } = useTranslation();
-  const [investment, setInvestment] = useState([1000]);
+  const [investment, setInvestment] = useState(1000);
 
-  const handleChange = (newValues: number[]) => {
+  const handleChange = (newValues: number) => {
     setInvestment(newValues);
   };
 
-  const bondsAmount = investment[0] / 1000;
-  const quarterIncome = formatMoney((investment[0] * 0.16) / 4);
-  const finalSum = formatMoney(investment[0] * 0.16 * 3 + investment[0]);
+  const bondsAmount = investment / 1000;
+  const quarterIncome = formatMoney((investment * 0.16) / 4);
+  const finalSum = formatMoney(investment * 0.16 * 3 + investment);
 
   return (
     <Container>
       <CalculatorWrapper>
-        <InvestmentSlider amount={investment} onChange={handleChange} min={1000} max={1000000} />
+        <InvestmentSlider
+          error={investment < 1000 ? 'Минимальная сумма - 1 000 с' : ''}
+          onChange={handleChange}
+          min={1000}
+          max={1000000}
+        />
         <ValuesContainer>
           <FromToValues>
             <StyledTypography variant={'body_a'}>{t('global.maturity')}</StyledTypography>

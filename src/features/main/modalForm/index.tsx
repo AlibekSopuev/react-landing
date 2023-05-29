@@ -17,7 +17,6 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { sendApplication } from '../../../services/sendApplication';
 import { InvestmentSlider } from '../../../components/shared/investmentSlider';
-import { Input } from '../../../components/ui/input';
 import { formatMoney } from '../../../helpers/utils';
 import { PhoneInputField } from '../../../components/ui/inputField/phone';
 import { InputField } from '../../../components/ui/inputField/main';
@@ -29,17 +28,19 @@ const ModalForm = () => {
   const isMobile = useDeviceDetected();
   const [open, setOpen] = useState(false);
 
-  const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number[] }>({
-    initialValues: { fullName: '', phoneNumber: '', investment: [1000] },
+  const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number }>({
+    initialValues: { fullName: '', phoneNumber: '', investment: 1000 },
     onSubmit: async (values) => {
-      const quantity = values.investment[0] / 1000;
+      const quantity = values.investment / 1000;
       await sendApplication(values.fullName, values.phoneNumber, quantity);
       setOpen(false);
     },
     validationSchema: Yup.object({
-      fullName: Yup.string().required('required'),
-      phoneNumber: Yup.string().required('required'),
-      investment: Yup.array(),
+      fullName: Yup.string().required('Обязательное поле'),
+      phoneNumber: Yup.string()
+        .matches(/^\d{12}$/, 'Номер должен состоять из 12 цифр')
+        .required('Обязательное поле'),
+      investment: Yup.number().min(1000, 'Минимальная сумма - 1 000 с').required('required'),
     }),
   });
 
@@ -48,11 +49,14 @@ const ModalForm = () => {
     handleChange,
     handleSubmit,
     setFieldValue,
+    isValid,
+    dirty,
+    errors: { investment: investmentError, phoneNumber: phoneNumberError, fullName: fullNameError },
   } = formik;
 
-  const bondsAmount = investment[0] / 1000;
-  const quarterIncome = formatMoney((investment[0] * 0.16) / 4);
-  const finalSum = formatMoney(investment[0] * 0.16 * 3 + investment[0]);
+  const bondsAmount = investment / 1000;
+  const quarterIncome = formatMoney((investment * 0.16) / 4);
+  const finalSum = formatMoney(investment * 0.16 * 3 + investment);
 
   return (
     <Wrapper>
@@ -85,6 +89,7 @@ const ModalForm = () => {
                 name='fullName'
                 value={fullName}
                 onChange={handleChange}
+                error={fullNameError}
               />
               <PhoneInputField
                 floatLabel
@@ -93,14 +98,17 @@ const ModalForm = () => {
                 onChange={(values) => setFieldValue('phoneNumber', values)}
                 type='phone'
                 defaultValue={phoneNumber}
+                error={phoneNumberError}
               />
               <InvestmentSlider
-                amount={investment}
-                onChange={(values) => setFieldValue('investment', values)}
+                onChange={(value: number) => setFieldValue('investment', value)}
                 min={1000}
                 max={1000000}
+                error={investmentError}
               />
-              <StyledButton type='submit'>{t('global.buttonSubmit')}</StyledButton>
+              <StyledButton disabled={!(isValid && dirty)} type='submit'>
+                {t('global.buttonSubmit')}
+              </StyledButton>
             </form>
           </InputWrapper>
           <CalculationsWrapper>

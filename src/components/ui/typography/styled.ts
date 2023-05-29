@@ -95,7 +95,7 @@ export const StyledMap = {
 } as const;
 
 type Props = {
-  cssKey: Keys;
+  cssKey?: Keys;
   color: string;
 };
 

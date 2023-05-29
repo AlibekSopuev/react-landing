@@ -30,7 +30,7 @@ export const InputFieldBase = React.forwardRef(
           {left && <InputSideContainer className='left_container'>{left}</InputSideContainer>}
           <InputContent className='input-content'>
             {floatLabel && placeholder && (
-              <Typography className='input-placeholder' element='span' variant='body_a_accent'>
+              <Typography className='input-placeholder' element='span'>
                 {placeholder}
               </Typography>
             )}

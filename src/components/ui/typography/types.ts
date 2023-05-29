@@ -17,7 +17,7 @@ export const VARIANTS = {
 } as const;
 
 export interface TypographyType extends React.HTMLAttributes<HTMLElement> {
-  variant: keyof typeof VARIANTS;
+  variant?: keyof typeof VARIANTS;
   color?: string;
   children: React.ReactNode;
   element?: keyof JSX.IntrinsicElements;
