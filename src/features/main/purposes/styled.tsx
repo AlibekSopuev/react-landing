@@ -11,8 +11,13 @@ export const ProductBenefitsWrapper = styled.div`
   align-items: center;
 `;
 export const ProductBenefitsContainer = styled.div`
-  padding: 80px 10px;
+  padding: 80px 0 120px;
   width: 100%;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 56px 16px 48px;
+    }
+  `}
 `;
 
 export const ProductBenefitsTitle = styled.div`
@@ -22,12 +27,32 @@ export const ProductBenefitsTitle = styled.div`
   line-height: 140%;
   letter-spacing: 0.0025em;
   color: #121112;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-weight: 600;
       font-size: 28px;
       line-height: 130%;
+      margin-bottom: 16px;
+    }
+  `}
+`;
+
+export const PurposeSubtitle = styled.div`
+  font-family: 'PT Root UI', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: #616163;
+  margin-bottom: 64px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 40px;
     }
   `}
 `;
@@ -35,7 +60,7 @@ export const ProductBenefitsTitle = styled.div`
 export const ProductBenefitsGrid = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(278px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(283px, 1fr));
   gap: 24px;
   width: 100%;
   ${({ theme }) => css`
@@ -57,6 +82,7 @@ export const Card = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       padding: 24px;
+      height: 164px;
     }
   `}
 

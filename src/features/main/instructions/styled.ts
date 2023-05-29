@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 80px 10px;
+  padding: 80px 0 96px;
   width: 100%;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
-      padding: 56px 16px;
+      padding: 56px 16px 32px;
     }
   `}
 `;
@@ -65,7 +65,7 @@ export const Card = styled.div`
     @media screen and (max-width: ${theme.media.small}) {
       min-width: 0;
       padding: 32px 16px;
-      gap: 16px;
+      margin-bottom: 16px;
     }
   `}
 `;

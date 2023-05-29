@@ -5,6 +5,7 @@ import {
   ProductBenefitsContainer,
   ProductBenefitsWrapper,
   Card,
+  PurposeSubtitle,
 } from './styled';
 import solarPanelsImage from 'src/assets/icons/solarPanels.png';
 import electroCarImage from 'src/assets/icons/electroCar.png';
@@ -20,6 +21,7 @@ const Purposes = () => {
     <ProductBenefitsWrapper>
       <ProductBenefitsContainer>
         <ProductBenefitsTitle>{t('purposes.title')}</ProductBenefitsTitle>
+        <PurposeSubtitle>{t('purposes.subtitle')}</PurposeSubtitle>
         <ProductBenefitsGrid>
           <Card>
             <h2>{t('purposes.electricCars')}</h2>

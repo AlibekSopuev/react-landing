@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  AdvantagesGrid,
   AdvantagesText,
   AdvantagesTitle,
   BackGround,
   Button,
+  GridContainer,
   ImgContainer,
-  Item1,
-  Item2,
-  Item3,
+  LeftBlock,
   ProductBenefitsContainer,
   ProductBenefitsTitle,
   ProductBenefitsWrapper,
+  RightBlock,
+  SmallBlock,
   TextContainer,
 } from './styled';
 import { IconArrowRight } from '../../../components/icons/iconArrowRight';
@@ -26,8 +26,8 @@ const Advantages = () => {
     <ProductBenefitsWrapper>
       <ProductBenefitsContainer>
         <ProductBenefitsTitle>{t('advantages.title')}</ProductBenefitsTitle>
-        <AdvantagesGrid>
-          <Item1>
+        <GridContainer>
+          <LeftBlock>
             <ImgContainer>
               <BackGround>
                 <IconSafety />
@@ -45,26 +45,28 @@ const Advantages = () => {
             <Button target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
               {t('advantages.hrefButton')} <IconArrowRight />
             </Button>
-          </Item1>
-          <Item2>
-            <ImgContainer>
-              <BackGround>
-                <IconSale />
-              </BackGround>
-            </ImgContainer>
-            <AdvantagesTitle>{t('advantages.interestRate')}</AdvantagesTitle>
-            <AdvantagesText>{t('advantages.interestRateSubtitle')}</AdvantagesText>
-          </Item2>
-          <Item3>
-            <ImgContainer>
-              <BackGround>
-                <IconStability />
-              </BackGround>
-            </ImgContainer>
-            <AdvantagesTitle>{t('advantages.stability')}</AdvantagesTitle>
-            <AdvantagesText>{t('advantages.stabilitySubtitle')}</AdvantagesText>
-          </Item3>
-        </AdvantagesGrid>
+          </LeftBlock>
+          <RightBlock>
+            <SmallBlock>
+              <ImgContainer>
+                <BackGround>
+                  <IconSale />
+                </BackGround>
+              </ImgContainer>
+              <AdvantagesTitle>{t('advantages.interestRate')}</AdvantagesTitle>
+              <AdvantagesText>{t('advantages.interestRateSubtitle')}</AdvantagesText>
+            </SmallBlock>
+            <SmallBlock>
+              <ImgContainer>
+                <BackGround>
+                  <IconStability />
+                </BackGround>
+              </ImgContainer>
+              <AdvantagesTitle>{t('advantages.stability')}</AdvantagesTitle>
+              <AdvantagesText>{t('advantages.stabilitySubtitle')}</AdvantagesText>
+            </SmallBlock>
+          </RightBlock>
+        </GridContainer>
       </ProductBenefitsContainer>
     </ProductBenefitsWrapper>
   );

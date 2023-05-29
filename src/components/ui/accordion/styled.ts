@@ -5,7 +5,13 @@ export const AccordionCover = styled.div`
   background: #ffffff;
   border-radius: 16px;
   padding: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-bottom: 12px;
+      padding: 24px;
+    }
+  `}
 `;
 
 export const AccordionHead = styled.div`
@@ -14,7 +20,6 @@ export const AccordionHead = styled.div`
   align-items: center;
   cursor: pointer;
   border-top: solid 1px var(--grey-200);
-  padding: 16px 0;
   svg {
     max-width: 34px;
     min-width: 34px;
@@ -35,9 +40,11 @@ export const AccordionTitle = styled.div`
   line-height: 140%;
   color: #121112;
   letter-spacing: 0.15px;
+  margin-right: 34px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 16px;
+      margin-right: 13px;
     }
   `}
 `;

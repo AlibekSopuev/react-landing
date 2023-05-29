@@ -9,6 +9,11 @@ export const ModalWrapper = styled.div`
   bottom: 0;
   backdrop-filter: blur(4px);
   z-index: 2;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      overflow: auto;
+    }
+  `}
 `;
 
 export const StyledCrossIcon = styled(IconCross)`
@@ -47,6 +52,9 @@ export const ModalContent = styled.div`
       max-width: 429px;
       min-width: 250px;
       padding: 32px 24px;
+      top: 58%;
+      max-height: 760px;
+      border-radius: 24px 24px 0 0;
     }
   `}
 `;

@@ -1,58 +1,74 @@
 import styled, { css } from 'styled-components';
 
-export const AdvantagesGrid = styled.div`
+export const GridContainer = styled.div`
   display: grid;
-  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr; /* Два столбца */
+  grid-gap: 24px; /* Промежуток между блоками */
   color: #444;
+
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
-      display: block;
+      grid-template-columns: 1fr; /* Одна колонка на мобильных устройствах */
+      grid-gap: 16px; /* Промежуток между блоками */
     }
   `}
 `;
 
-export const AdvantagesBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px;
-  max-width: 585px;
+export const LeftBlock = styled.div`
+  grid-column: 1; /* Занимает первый столбец */
   background: #ffffff;
-  box-shadow: 0 4px 100px rgba(50, 160, 113, 0.02);
+  padding: 40px;
   border-radius: 24px;
+  box-shadow: 0 4px 100px rgba(50, 160, 113, 0.02);
+
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       padding: 24px;
-      margin-bottom: 16px;
     }
   `}
 `;
 
-export const Item1 = styled(AdvantagesBlock)`
-  grid-column: 1;
-  grid-row: 1 / 3;
+export const RightBlock = styled.div`
+  grid-column: 2; /* Занимает второй столбец */
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Два малых блока по высоте */
+  grid-gap: 24px; /* Промежуток между малыми блоками */
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      grid-column: 1; /* Занимает всю ширину на мобильных устройствах */
+      grid-gap: 16px; /* Уменьшаем промежуток на мобильных устройствах */
+    }
+  `}
 `;
 
-export const Item2 = styled(AdvantagesBlock)`
-  grid-row: 1;
-`;
-
-export const Item3 = styled(AdvantagesBlock)`
-  grid-row: 2;
+export const SmallBlock = styled.div`
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 4px 100px rgba(50, 160, 113, 0.02);
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 24px;
+    }
+  `}
 `;
 
 export const ProductBenefitsWrapper = styled.div`
   width: 100%;
   //max-width: 1200px;
   align-items: center;
-  margin-bottom: 80px;
   display: flex;
   justify-content: center;
 `;
 export const ProductBenefitsContainer = styled.div`
-  padding: 80px 10px;
+  padding: 80px 0;
   width: 100%;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 56px 16px 48px;
+    }
+  `}
 `;
 
 export const ProductBenefitsTitle = styled.div`
@@ -68,6 +84,7 @@ export const ProductBenefitsTitle = styled.div`
       font-weight: 600;
       font-size: 28px;
       line-height: 130%;
+      margin-bottom: 40px;
     }
   `}
 `;

@@ -1,8 +1,13 @@
 import styled, { css } from 'styled-components';
 
 export const FooterCover = styled.footer`
-  margin-top: 64px;
-  padding: 16px;
+  padding: 64px 0 80px;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      padding: 36px 16px 48px;
+    }
+  `}
 `;
 
 export const Container = styled.div`
