@@ -109,6 +109,7 @@ export const ValuesContainer = styled.div`
   border-radius: 16px;
   width: 100%;
   max-width: 528px;
+  height: 60px;
   background-color: ${({ theme }) => theme.colors.grey.primary_inverted.grey50};
 `;
 

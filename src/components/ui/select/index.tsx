@@ -13,6 +13,7 @@ import {
 import { ISelectProps, Option } from './types';
 import { useOutsideClick } from 'src/core/hooks';
 import { IconChevron } from '../../icons/iconChevron';
+import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
 
 export const Select: React.FC<ISelectProps> = ({
   className,
@@ -31,6 +32,8 @@ export const Select: React.FC<ISelectProps> = ({
 }) => {
   const [open, setOpen] = React.useState<boolean>(false);
   const [selectedValue, setSelectedValue] = React.useState<any>({});
+
+  const isMobile = useDeviceDetected();
 
   const ref = React.useRef<HTMLDivElement>(null);
 
@@ -66,16 +69,19 @@ export const Select: React.FC<ISelectProps> = ({
           {selectedValue.icon && showSelectedValueIcon && (
             <IconValueContainer className='icon-value-container'>{selectedValue?.icon}</IconValueContainer>
           )}
-          <StyledInput
-            className='input'
-            name={name}
-            placeholder={placeholder}
-            defaultValue={(showSelectedValue && selectedValue.label) || defaultValue}
-            readOnly={readOnly}
-            disabled={disabled}
-            hasLabel={!!label}
-            showSelectedValueIcon={showSelectedValueIcon}
-          />
+          {!isMobile && (
+            <StyledInput
+              className='input'
+              name={name}
+              placeholder={placeholder}
+              defaultValue={(showSelectedValue && selectedValue.label) || defaultValue}
+              readOnly={readOnly}
+              disabled={disabled}
+              hasLabel={!!label}
+              showSelectedValueIcon={showSelectedValueIcon}
+            />
+          )}
+
           <IconContainer className='icon-container'>
             <IconChevron style={{ transform: (open && 'rotate(180deg)') || 'rotate(0deg)' }} />
           </IconContainer>

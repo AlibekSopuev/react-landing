@@ -13,7 +13,7 @@ export const InputContent = styled.div`
 export const InputErrorText = styled.div`
   font-family: ${({ theme }) => theme.fontFace.pt_root_ui_regular};
   text-align: left;
-  margin-top: 8px;
+  margin-top: 15px;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;

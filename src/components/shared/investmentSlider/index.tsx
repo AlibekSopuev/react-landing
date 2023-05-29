@@ -23,7 +23,7 @@ export const InvestmentSlider: React.FC<ISliderProps> = ({ onChange, min, max, e
   }, [investment]);
 
   return (
-    <>
+    <Container>
       <ValuesContainer>
         <FromToValues>
           <StyledTypography variant='body_a'>{t('global.investmentAmount')}</StyledTypography>
@@ -42,6 +42,6 @@ export const InvestmentSlider: React.FC<ISliderProps> = ({ onChange, min, max, e
         </SliderContainer>
       </ValuesContainer>
       {error && <InputErrorText className='input-text__error'>{error}</InputErrorText>}
-    </>
+    </Container>
   );
 };

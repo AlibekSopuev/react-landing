@@ -31,7 +31,12 @@ const Calculator = () => {
   return (
     <Container>
       <CalculatorWrapper>
-        <InvestmentSlider onChange={handleChange} min={1000} max={1000000} />
+        <InvestmentSlider
+          onChange={handleChange}
+          min={1000}
+          max={1000000}
+          error={investment < 1000 ? 'Минимальная сумма - 1 000 с' : ''}
+        />
         <ValuesContainer>
           <FromToValues>
             <StyledTypography variant={'body_a'}>{t('global.maturity')}</StyledTypography>

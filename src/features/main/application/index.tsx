@@ -59,7 +59,7 @@ const Application = () => {
                 defaultValue={phoneNumber}
               />
             </InputWrapper>
-            <InvestmentSlider onChange={(value) => setFieldValue('investment', value)} min={1000} max={1000000} />
+            <InvestmentSlider onChange={(value) => setFieldValue('investment', value)} min={1000} max={1000000}  />
           </form>
         </CalculatorWrapper>
         <Signature>

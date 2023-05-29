@@ -19,6 +19,7 @@ export const ValuesContainer = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       display: block;
+      margin-bottom: 24px;
     }
   `}
 `;

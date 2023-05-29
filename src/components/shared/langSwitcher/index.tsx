@@ -4,6 +4,7 @@ import { IconRu } from '../../icons/iconRu';
 import { IconKg } from '../../icons/iconKg';
 import { IconEng } from '../../icons/iconEng';
 import { CustomSelect, ListItem } from './styled';
+import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
 
 interface ILangSwitcher {
   selected?: string;
@@ -11,10 +12,12 @@ interface ILangSwitcher {
 }
 
 const CustomOption = (props: any) => {
+  const isMobile = useDeviceDetected();
+
   return (
     <ListItem {...props}>
       {props.data.icon}
-      {props.data.label}
+      {!isMobile && props.data.label}
     </ListItem>
   );
 };

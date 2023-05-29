@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
   },
-  "include": ["src", "styled-components.d.ts", "core-bridge.d.ts"]
+  "include": ["src", "styled-components.d.ts", "custom.d.ts"]
 }

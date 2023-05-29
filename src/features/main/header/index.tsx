@@ -15,14 +15,9 @@ import {
   StyledInitEn,
   StyledInitRu,
 } from './styled';
-import { IconLogo } from '../../../components/icons/iconLogo';
 import { IconSentiLogo } from '../../../components/icons/iconSentiLogo';
 import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
-import { IconDCBGreen } from '../../../components/icons/iconDCBGreen';
 import { useTranslation } from 'react-i18next';
-import { IconInitiativeKyrgyz } from '../../../components/icons/iconInitiativeKyrgyz';
-import { IconInitiativeEn } from '../../../components/icons/iconInitiativeEn';
-import { IconInitiativeRu } from '../../../components/icons/iconInitiativeRu';
 
 export const AppHeader = () => {
   const { i18n } = useTranslation();
@@ -53,7 +48,7 @@ export const AppHeader = () => {
               </RightContent>
             )}
           </DesktopLogoCover>
-          {!isMobile && <StyledLangSwitcher />}
+          <StyledLangSwitcher />
         </HeaderBottom>
       </Container>
     </Header>
