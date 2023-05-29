@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Select } from 'src/components/ui/select';
 
 export const CustomSelect = styled(Select)`
@@ -12,6 +12,12 @@ export const CustomSelect = styled(Select)`
     border: 2px solid #ebebeb;
     border-radius: 12px;
     padding: 12px 12px 12px 20px;
+    gap: 6px;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        padding: 12px 12.5px;
+      }
+    `}
   }
 
   .input {
@@ -36,6 +42,13 @@ export const CustomSelect = styled(Select)`
     padding: 8px;
     left: -52px;
     bottom: -170px;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        width: initial;
+        left: initial;
+        padding: 13px;
+      }
+    `}
   }
 `;
 
@@ -52,7 +65,18 @@ export const ListItem = styled.li<IListItem>`
   border-radius: 8px;
   background-color: ${({ selected }) => selected && '#F5F5F5'};
 
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      background-color: white;
+    }
+  `}
+
   svg {
     margin-right: 12px;
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.media.small}) {
+        margin-right: 0;
+      }
+    `}
   }
 `;

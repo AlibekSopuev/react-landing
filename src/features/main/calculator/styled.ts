@@ -86,7 +86,6 @@ export const Title = styled.div`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 14px;
       margin-bottom: 8px;
-      white-space: nowrap;
     }
   `}
 `;
