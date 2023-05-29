@@ -1,9 +1,15 @@
 import styled, { css } from 'styled-components';
 import Typography from 'src/components/ui/typography';
 import { InputField } from '../../ui/inputField/main';
+import { InputErrorText } from '../../ui/inputField/base/styled';
 
 export const Container = styled.div`
-  margin-top: 8px;
+  position: relative;
+  width: 100%;
+`;
+
+export const StyledError = styled(InputErrorText)`
+  position: absolute;
 `;
 
 export const ValuesContainer = styled.div`
@@ -13,7 +19,6 @@ export const ValuesContainer = styled.div`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       display: block;
-      margin-bottom: 24px;
     }
   `}
 `;

@@ -89,7 +89,6 @@ const ModalForm = () => {
                 name='fullName'
                 value={fullName}
                 onChange={handleChange}
-                error={fullNameError}
               />
               <PhoneInputField
                 floatLabel
@@ -98,13 +97,11 @@ const ModalForm = () => {
                 onChange={(values) => setFieldValue('phoneNumber', values)}
                 type='phone'
                 defaultValue={phoneNumber}
-                error={phoneNumberError}
               />
               <InvestmentSlider
                 onChange={(value: number) => setFieldValue('investment', value)}
                 min={1000}
                 max={1000000}
-                error={investmentError}
               />
               <StyledButton disabled={!(isValid && dirty)} type='submit'>
                 {t('global.buttonSubmit')}

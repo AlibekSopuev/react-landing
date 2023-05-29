@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { RangeSlider } from 'src/components/ui/rangeSlider';
-import { FromToValues, StyledTypography, SliderContainer, ValuesContainer, StyledInputField } from './styled';
+import {
+  FromToValues,
+  StyledTypography,
+  SliderContainer,
+  ValuesContainer,
+  StyledInputField,
+  Container,
+} from './styled';
 import { useTranslation } from 'react-i18next';
 import { InputErrorText } from '../../ui/inputField/base/styled';
 import { ISliderProps } from './types';
