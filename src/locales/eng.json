@@ -14,7 +14,7 @@
   },
  "global": {
    "investmentAmount":"Investment amount",
-   "numberOfBonds:": "Number of bonds:",
+   "numberOfBonds": "Number of bonds:",
    "interestRate": "Interest rate",
    "maturity": "Maturity",
    "quarterlyIncome": "Quarterly income",

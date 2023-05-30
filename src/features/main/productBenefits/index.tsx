@@ -59,7 +59,7 @@ const ProductBenefits = () => {
               </BackGround>
             </ImgContainer>
             <CardText>{t('productBenefits.maturity')}</CardText>
-            <CardNumbers>3 года</CardNumbers>
+            <CardNumbers>3 {t('global.maturityAmount')}</CardNumbers>
           </ProductBenefitsCard>
           <ProductBenefitsCard>
             <ImgContainer>
