@@ -13,9 +13,10 @@ const Application = () => {
   const { t } = useTranslation();
   const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number }>({
     initialValues: { fullName: '', phoneNumber: '', investment: 1000 },
-    onSubmit: async (values) => {
+    onSubmit: async (values, formikHelpers) => {
       const quantity = values.investment / 1000;
       await sendApplication(values.fullName, `+${values.phoneNumber}`, quantity);
+      formikHelpers.resetForm();
     },
     validationSchema: Yup.object({
       fullName: Yup.string().required('global.requiredField'),

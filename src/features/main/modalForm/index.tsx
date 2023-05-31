@@ -30,9 +30,10 @@ const ModalForm = () => {
 
   const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number }>({
     initialValues: { fullName: '', phoneNumber: '', investment: 1000 },
-    onSubmit: async (values) => {
+    onSubmit: async (values, formikHelpers) => {
       const quantity = values.investment / 1000;
       await sendApplication(values.fullName, `+${values.phoneNumber}`, quantity);
+      formikHelpers.resetForm();
       setOpen(false);
     },
     validationSchema: Yup.object({

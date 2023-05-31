@@ -120,6 +120,14 @@ export const FromToValues = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.grey.disabled.grey100};
 `;
 
+export const Note = styled.div`
+  font-family: 'PT Root UI', sans-serif;
+  font-weight: 100;
+  margin-top: 10px;
+  padding: 0 16px;
+  color: ${({ theme }) => theme.colors.text.secondary.text500};
+`;
+
 export const StyledTypography = styled(Typography)`
   line-height: 24px;
   color: ${({ theme }) => theme.colors.text.secondary.text500};

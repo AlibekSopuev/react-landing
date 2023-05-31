@@ -24,7 +24,8 @@
     "requiredField": "Милдеттүү түрдө киргизүү талаасы",
     "minimumAmount": "Минималдуу сумма - 1 000 с",
     "buttonSubmit": "Билдирме калтыруу",
-    "minimumPhoneNumber": "Телефон номери 12 сандан туруш керек"
+    "minimumPhoneNumber": "Телефон номери 12 сандан туруш керек",
+    "note": "* Болжолдуу эсептөөлөр. Банктын кызматкери сизге так маалыматты берет."
   },
   "productBenefits": {
     "title": "Ыңгайлуу шарттарда инвестиция кылыңыз",
@@ -59,7 +60,7 @@
     "solarPanels": "Күн панелдери",
     "dripIrrigation": "Тамчылатып сугаруу",
     "energyEfficientBuilding": "Энергияны үнөмдөөчү үй",
-    "organicFarming": "Айылдык экономика",
+    "organicFarming": "Айыл чарба экономика",
     "ecoTourism": "Экотуризм"
   },
   "instructions": {
