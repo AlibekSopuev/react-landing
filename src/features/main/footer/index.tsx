@@ -9,10 +9,14 @@ import {
   BankInfoBox,
   BankLicense,
   Label,
+  Link,
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
 import { IconSocialMedias } from '../../../components/icons/iconSocialMedias';
 import { useTranslation } from 'react-i18next';
+import { IconInsta } from '../../../components/icons/iconInsta';
+import { IconFacebook } from '../../../components/icons/iconFacebook';
+import { IconTwit } from '../../../components/icons/iconTwit';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -24,7 +28,15 @@ export const Footer: React.FC = () => {
             <BottomContentBoxTitle>
               <IconFooterLogo />
             </BottomContentBoxTitle>
-            <IconSocialMedias />
+            <Link href={'https://www.instagram.com/doscredobank_kg/?hl=ru'}>
+              <IconInsta />
+            </Link>
+            <Link href={'https://www.facebook.com/doscredobank.kg'}>
+              <IconFacebook />
+            </Link>
+            <Link href={'https://twitter.com/doscredobank_kg'}>
+              <IconTwit />
+            </Link>
           </BottomContentBox>
           <BankInfoBox>
             <BankLicense>{t('footer.history')}</BankLicense>

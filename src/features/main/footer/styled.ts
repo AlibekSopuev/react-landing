@@ -155,3 +155,7 @@ export const SocialIconsBox = styled.div`
     margin-right: 12px;
   }
 `;
+
+export const Link = styled.a`
+  margin-right: 12px;
+`;

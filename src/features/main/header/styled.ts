@@ -94,7 +94,9 @@ export const StyledInitKyrgyz = styled(IconInitiativeKyrgyz)`
     }
   `}
 `;
-export const LogoWrapper = styled.div``;
+export const LogoWrapper = styled.div`
+  display: flex;
+`;
 export const PhoneNumber = styled.a`
   font-family: 'PT Root UI', sans-serif;
   font-weight: 700;
@@ -117,4 +119,9 @@ export const RightContent = styled.div`
 
 export const StyledLangSwitcher = styled(LangSwitcher)`
   margin-left: 60px;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.media.small}) {
+      margin-left: 0;
+    }
+  `}
 `;
