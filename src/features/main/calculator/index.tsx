@@ -35,7 +35,7 @@ const Calculator = () => {
           onChange={handleChange}
           min={1000}
           max={1000000}
-          error={investment < 1000 ? 'Минимальная сумма - 1 000 с' : ''}
+          error={investment < 1000 ? (t('global.minimumAmount') as string) : ''}
         />
         <ValuesContainer>
           <FromToValues>

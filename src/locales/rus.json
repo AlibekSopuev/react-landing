@@ -23,7 +23,8 @@
     "number": "Ваш номер телефона",
     "buttonSubmit": "Оставить заявку",
     "requiredField": "Обязательное поле",
-    "minimumAmount": "Минимальная сумма — 1 000 с"
+    "minimumAmount": "Минимальная сумма - 1 000 с",
+    "minimumPhoneNumber": "Номер должен состоять из 12 цифр"
   },
   "productBenefits": {
     "title": "Инвестируйте на выгодных условиях",

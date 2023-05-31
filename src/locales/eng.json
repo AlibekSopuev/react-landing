@@ -14,7 +14,7 @@
   },
  "global": {
    "investmentAmount":"Investment amount",
-   "numberOfBonds:": "Number of bonds:",
+   "numberOfBonds": "Number of bonds:",
    "interestRate": "Interest rate",
    "maturity": "Maturity",
    "quarterlyIncome": "Quarterly income",
@@ -25,7 +25,8 @@
    "number": "Number",
    "buttonSubmit": "Submit",
    "requiredField": "Required field",
-   "minimumAmount": "Minimum amount — 1 000 KGS"
+   "minimumAmount": "Minimum amount - 1 000 KGS",
+   "minimumPhoneNumber": "Phone number must contain 12 numbers"
  },
   "productBenefits": {
     "title": "Invest on beneficial terms",

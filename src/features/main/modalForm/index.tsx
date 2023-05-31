@@ -32,25 +32,28 @@ const ModalForm = () => {
     initialValues: { fullName: '', phoneNumber: '', investment: 1000 },
     onSubmit: async (values) => {
       const quantity = values.investment / 1000;
-      await sendApplication(values.fullName, values.phoneNumber, quantity);
+      await sendApplication(values.fullName, `+${values.phoneNumber}`, quantity);
       setOpen(false);
     },
     validationSchema: Yup.object({
-      fullName: Yup.string().required('Обязательное поле'),
+      fullName: Yup.string().required(t('global.requiredField') as string),
       phoneNumber: Yup.string()
-        .matches(/^\d{12}$/, 'Номер должен состоять из 12 цифр')
-        .required('Обязательное поле'),
-      investment: Yup.number().min(1000, 'Минимальная сумма - 1 000 с').required('required'),
+        .matches(/^\d{12}$/, t('global.minimumPhoneNumber') as string)
+        .required(t('global.requiredField') as string),
+      investment: Yup.number()
+        .min(1000, t('global.minimumAmount') as string)
+        .required(t('global.requiredField') as string),
     }),
   });
 
   const {
     values: { investment, phoneNumber, fullName },
-    handleChange,
     handleSubmit,
     setFieldValue,
     isValid,
     dirty,
+    setFieldTouched,
+    touched: { investment: investmentTouched, phoneNumber: phoneNumberTouched, fullName: fullNameTouched },
     errors: { investment: investmentError, phoneNumber: phoneNumberError, fullName: fullNameError },
   } = formik;
 
@@ -88,23 +91,32 @@ const ModalForm = () => {
                 placeholder={t('global.yourName') as string}
                 name='fullName'
                 value={fullName}
-                onChange={handleChange}
-                error={fullNameError}
+                onChange={(e) => {
+                  setFieldTouched('fullName');
+                  setFieldValue('fullName', e.target.value);
+                }}
+                error={fullNameTouched ? fullNameError : ''}
               />
               <PhoneInputField
                 floatLabel
                 label={t('global.number') as string}
                 placeholder={t('global.number') as string}
-                onChange={(values) => setFieldValue('phoneNumber', values)}
+                onChange={(values) => {
+                  setFieldTouched('phoneNumber', !!values);
+                  setFieldValue('phoneNumber', values);
+                }}
                 type='phone'
                 defaultValue={phoneNumber}
-                error={phoneNumberError}
+                error={phoneNumberTouched ? phoneNumberError : ''}
               />
               <InvestmentSlider
-                onChange={(value: number) => setFieldValue('investment', value)}
+                onChange={(value: number) => {
+                  setFieldTouched('investment');
+                  setFieldValue('investment', value);
+                }}
                 min={1000}
                 max={1000000}
-                error={investmentError}
+                error={investmentTouched ? investmentError : ''}
               />
               <StyledButton disabled={!(isValid && dirty)} type='submit'>
                 {t('global.buttonSubmit')}

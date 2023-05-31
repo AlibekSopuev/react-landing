@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, TextBlock, FormBlock, Title, Text, InputWrapper, CalculatorWrapper, Signature } from './styled';
-import { Input } from '../../../components/ui/input';
 import { InvestmentSlider } from '../../../components/shared/investmentSlider';
 import Button from '../../../components/ui/button';
 import { useFormik } from 'formik';
@@ -12,24 +11,32 @@ import { InputField } from '../../../components/ui/inputField/main';
 
 const Application = () => {
   const { t } = useTranslation();
-  const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number[] }>({
-    initialValues: { fullName: '', phoneNumber: '', investment: [1000] },
+  const formik = useFormik<{ fullName: string; phoneNumber: string; investment: number }>({
+    initialValues: { fullName: '', phoneNumber: '', investment: 1000 },
     onSubmit: async (values) => {
-      const quantity = values.investment[0] / 1000;
-      await sendApplication(values.fullName, values.phoneNumber, quantity);
+      const quantity = values.investment / 1000;
+      await sendApplication(values.fullName, `+${values.phoneNumber}`, quantity);
     },
     validationSchema: Yup.object({
-      fullName: Yup.string().required('required'),
-      phoneNumber: Yup.string().required('required'),
-      investment: Yup.array(),
+      fullName: Yup.string().required(t('global.requiredField') as string),
+      phoneNumber: Yup.string()
+        .matches(/^\d{12}$/, t('global.minimumPhoneNumber') as string)
+        .required(t('global.requiredField') as string),
+      investment: Yup.number()
+        .min(1000, t('global.minimumAmount') as string)
+        .required(t('global.requiredField') as string),
     }),
   });
 
   const {
-    values: { investment, phoneNumber, fullName },
-    handleChange,
+    values: { phoneNumber, fullName },
     handleSubmit,
     setFieldValue,
+    isValid,
+    dirty,
+    setFieldTouched,
+    touched: { investment: investmentTouched, phoneNumber: phoneNumberTouched, fullName: fullNameTouched },
+    errors: { investment: investmentError, phoneNumber: phoneNumberError, fullName: fullNameError },
   } = formik;
 
   return (
@@ -44,22 +51,38 @@ const Application = () => {
             <InputWrapper>
               <InputField
                 floatLabel
-                label='Ваше имя'
-                placeholder='Ваше имя'
+                label={t('global.yourName') as string}
+                placeholder={t('global.yourName') as string}
                 name='fullName'
                 value={fullName}
-                onChange={handleChange}
+                onChange={(e) => {
+                  setFieldTouched('fullName');
+                  setFieldValue('fullName', e.target.value);
+                }}
+                error={fullNameTouched ? fullNameError : ''}
               />
               <PhoneInputField
                 floatLabel
                 label={t('global.number') as string}
                 placeholder={t('global.number') as string}
-                onChange={(values) => setFieldValue('phoneNumber', values)}
+                onChange={(values) => {
+                  setFieldTouched('phoneNumber', !!values);
+                  setFieldValue('phoneNumber', values);
+                }}
                 type='phone'
                 defaultValue={phoneNumber}
+                error={phoneNumberTouched ? phoneNumberError : ''}
               />
             </InputWrapper>
-            <InvestmentSlider onChange={(value) => setFieldValue('investment', value)} min={1000} max={1000000}  />
+            <InvestmentSlider
+              onChange={(value: number) => {
+                setFieldTouched('investment');
+                setFieldValue('investment', value);
+              }}
+              min={1000}
+              max={1000000}
+              error={investmentTouched ? investmentError : ''}
+            />
           </form>
         </CalculatorWrapper>
         <Signature>
@@ -75,7 +98,7 @@ const Application = () => {
           </a>
         </Signature>
         <Button type='submit' onClick={() => handleSubmit()}>
-          Оставить заявку
+          {t('global.buttonSubmit')}
         </Button>
       </FormBlock>
     </Container>
