@@ -12,7 +12,6 @@ import {
   Link,
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
-import { IconSocialMedias } from '../../../components/icons/iconSocialMedias';
 import { useTranslation } from 'react-i18next';
 import { IconInsta } from '../../../components/icons/iconInsta';
 import { IconFacebook } from '../../../components/icons/iconFacebook';
@@ -28,13 +27,13 @@ export const Footer: React.FC = () => {
             <BottomContentBoxTitle>
               <IconFooterLogo />
             </BottomContentBoxTitle>
-            <Link href={'https://www.instagram.com/doscredobank_kg/?hl=ru'}>
+            <Link target='_blank' rel='noreferrer' href={'https://www.instagram.com/doscredobank_kg/?hl=ru'}>
               <IconInsta />
             </Link>
-            <Link href={'https://www.facebook.com/doscredobank.kg'}>
+            <Link target='_blank' rel='noreferrer' href={'https://www.facebook.com/doscredobank.kg'}>
               <IconFacebook />
             </Link>
-            <Link href={'https://twitter.com/doscredobank_kg'}>
+            <Link target='_blank' rel='noreferrer' href={'https://twitter.com/doscredobank_kg'}>
               <IconTwit />
             </Link>
           </BottomContentBox>
@@ -42,7 +41,9 @@ export const Footer: React.FC = () => {
             <BankLicense>{t('footer.history')}</BankLicense>
           </BankInfoBox>
           <BottomContentBox style={{ marginRight: 0 }}>
-            <Label href={'https://www.dcb.kg/ru/'}>dcb.kg</Label>
+            <Label target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
+              dcb.kg
+            </Label>
             <BottomContentBoxText>{t('footer.headOffice')}</BottomContentBoxText>
             <BottomContentBoxText>720000</BottomContentBoxText>
             <BottomContentBoxText>{t('footer.republic')}</BottomContentBoxText>

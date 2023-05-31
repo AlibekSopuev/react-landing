@@ -36,13 +36,11 @@ const ModalForm = () => {
       setOpen(false);
     },
     validationSchema: Yup.object({
-      fullName: Yup.string().required(t('global.requiredField') as string),
+      fullName: Yup.string().required('global.requiredField'),
       phoneNumber: Yup.string()
-        .matches(/^\d{12}$/, t('global.minimumPhoneNumber') as string)
-        .required(t('global.requiredField') as string),
-      investment: Yup.number()
-        .min(1000, t('global.minimumAmount') as string)
-        .required(t('global.requiredField') as string),
+        .matches(/^\d{12}$/, 'global.minimumPhoneNumber')
+        .required('global.requiredField'),
+      investment: Yup.number().min(1000, 'global.minimumAmount').required('global.requiredField'),
     }),
   });
 

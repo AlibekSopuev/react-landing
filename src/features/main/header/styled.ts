@@ -96,6 +96,10 @@ export const StyledInitKyrgyz = styled(IconInitiativeKyrgyz)`
 `;
 export const LogoWrapper = styled.div`
   display: flex;
+  align-items: center;
+  & > :nth-child(2) {
+    margin-top: 2px;
+  }
 `;
 export const PhoneNumber = styled.a`
   font-family: 'PT Root UI', sans-serif;

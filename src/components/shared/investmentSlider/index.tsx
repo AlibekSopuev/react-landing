@@ -41,7 +41,7 @@ export const InvestmentSlider: React.FC<ISliderProps> = ({ onChange, min, max, e
           />
         </SliderContainer>
       </ValuesContainer>
-      {error && <InputErrorText className='input-text__error'>{error}</InputErrorText>}
+      {error && <InputErrorText className='input-text__error'>{t(error)}</InputErrorText>}
     </Container>
   );
 };

@@ -2,9 +2,12 @@ import React from 'react';
 import { InputContent, InputErrorText, InputSideContainer, InputWrapper, StyledInput } from './styled';
 import Typography from '../../typography';
 import { InputFieldProps } from '../main/types';
+import { useTranslation } from 'react-i18next';
 
 export const InputFieldBase = React.forwardRef(
   ({ className, error, floatLabel, left, right, placeholder, ...rest }: InputFieldProps, ref) => {
+    const { t } = useTranslation();
+
     const inputRef = React.useRef<HTMLInputElement>(null);
     const isEmpty = !!(rest.value || rest.defaultValue);
 
@@ -44,7 +47,7 @@ export const InputFieldBase = React.forwardRef(
           </InputContent>
           {right && <InputSideContainer className='right_container'>{right}</InputSideContainer>}
         </InputWrapper>
-        {error && <InputErrorText className='input-text__error'>{error}</InputErrorText>}
+        {error && <InputErrorText className='input-text__error'>{t(error)}</InputErrorText>}
       </InputContent>
     );
   },
