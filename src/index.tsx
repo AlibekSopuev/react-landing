@@ -6,6 +6,7 @@ import { initReactI18next } from 'react-i18next';
 
 import './styles/fonts.css';
 import './styles/reset.css';
+import './styles/toastify.css';
 
 import * as eng from './locales/eng.json';
 import * as kyrgyz from './locales/kyrgyz.json';

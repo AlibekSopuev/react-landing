@@ -36,10 +36,10 @@ export const Title = styled.div`
   line-height: 130%;
   letter-spacing: 0.0025em;
   color: #121112;
+  margin-bottom: 16px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 28px;
-      margin-bottom: 16px;
     }
   `}
 `;

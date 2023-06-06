@@ -22,6 +22,7 @@ import { PhoneInputField } from '../../../components/ui/inputField/phone';
 import { InputField } from '../../../components/ui/inputField/main';
 import { useDeviceDetected } from '../../../core/hooks/useDeviceDetected';
 import { useTranslation } from 'react-i18next';
+import { Notify } from '../../../components/ui/snackbars';
 
 const ModalForm = () => {
   const { t } = useTranslation();
@@ -32,7 +33,13 @@ const ModalForm = () => {
     initialValues: { fullName: '', phoneNumber: '', investment: 1000 },
     onSubmit: async (values, formikHelpers) => {
       const quantity = values.investment / 1000;
-      await sendApplication(values.fullName, `+${values.phoneNumber}`, quantity);
+      sendApplication(values.fullName, `+${values.phoneNumber}`, quantity)
+        .then(() => {
+          Notify({ variant: 'positive', text: 'global.applicationAccepted' });
+        })
+        .catch(() => {
+          Notify({ variant: 'destructive', text: 'global.applicationError' });
+        });
       formikHelpers.resetForm();
       setOpen(false);
     },
@@ -52,6 +59,7 @@ const ModalForm = () => {
     isValid,
     dirty,
     setFieldTouched,
+    isSubmitting,
     touched: { investment: investmentTouched, phoneNumber: phoneNumberTouched, fullName: fullNameTouched },
     errors: { investment: investmentError, phoneNumber: phoneNumberError, fullName: fullNameError },
   } = formik;
@@ -96,18 +104,19 @@ const ModalForm = () => {
                 }}
                 error={fullNameTouched ? fullNameError : ''}
               />
-              <PhoneInputField
-                floatLabel
-                label={t('global.number') as string}
-                placeholder={t('global.number') as string}
-                onChange={(values) => {
-                  setFieldTouched('phoneNumber', !!values);
-                  setFieldValue('phoneNumber', values);
-                }}
-                type='phone'
-                defaultValue={phoneNumber}
-                error={phoneNumberTouched ? phoneNumberError : ''}
-              />
+              {!isSubmitting && (
+                <PhoneInputField
+                  floatLabel
+                  label={t('global.number') as string}
+                  placeholder={t('global.number') as string}
+                  onChange={(values) => {
+                    setFieldTouched('phoneNumber', !!values);
+                    setFieldValue('phoneNumber', values);
+                  }}
+                  defaultValue={phoneNumber}
+                  error={phoneNumberTouched ? phoneNumberError : ''}
+                />
+              )}
               <InvestmentSlider
                 onChange={(value: number) => {
                   setFieldTouched('investment');

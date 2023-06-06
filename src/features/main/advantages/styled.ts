@@ -131,10 +131,10 @@ export const AdvantagesTitle = styled.div`
   align-items: center;
   letter-spacing: 0.3px;
   color: #121112;
+  margin-bottom: 16px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.media.small}) {
       font-size: 16px;
-      margin-bottom: 16px;
     }
   `}
 `;

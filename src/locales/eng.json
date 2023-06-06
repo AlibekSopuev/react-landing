@@ -27,7 +27,10 @@
    "requiredField": "Required field",
    "minimumAmount": "Minimum amount - 1 000 KGS",
    "minimumPhoneNumber": "Phone number must contain 12 numbers",
-   "note": "* Approximate calculations. For more information, please contact our consultant."
+   "note": "* Approximate calculations. For more information, please contact our consultant.",
+   "officialPartners": "Official partners:",
+   "applicationAccepted": "Your application has been accepted. Our specialist will contact you",
+   "applicationError": "Server error while sending application. Our specialists are already solving this problem"
  },
   "productBenefits": {
     "title": "Invest on beneficial terms",

@@ -1,16 +1,17 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import { AppThemeProvider } from './context/themeContetxt';
 import { GlobalAppContainer } from './components/ui/appContainer';
 import { GlobalStyle } from './styles/global';
 import Banner from './features/main/banner';
 import Calculator from './features/main/calculator';
 import ModalForm from './features/main/modalForm';
-const ProductBenefits = React.lazy(() => import('src/features/main/productBenefits'));
-const Advantages = React.lazy(() => import('src/features/main/advantages'));
-const Purposes = React.lazy(() => import('src/features/main/purposes'));
-const Instructions = React.lazy(() => import('src/features/main/instructions'));
-const Application = React.lazy(() => import('src/features/main/application'));
-const Questions = React.lazy(() => import('src/features/main/questions'));
+import ProductBenefits from './features/main/productBenefits';
+import Advantages from './features/main/advantages';
+import Purposes from './features/main/purposes';
+import Instructions from './features/main/instructions';
+import Application from './features/main/application';
+import Questions from './features/main/questions';
 
 function App() {
   return (
@@ -20,24 +21,13 @@ function App() {
         <Banner />
         <Calculator />
         <ModalForm />
-        <React.Suspense fallback=''>
-          <ProductBenefits />
-        </React.Suspense>
-        <React.Suspense fallback=''>
-          <Advantages />
-        </React.Suspense>
-        <React.Suspense fallback=''>
-          <Purposes />
-        </React.Suspense>
-        <React.Suspense fallback=''>
-          <Instructions />
-        </React.Suspense>
-        <React.Suspense fallback=''>
-          <Application />
-        </React.Suspense>
-        <React.Suspense fallback=''>
-          <Questions />
-        </React.Suspense>
+        <ProductBenefits />
+        <Advantages />
+        <Purposes />
+        <Instructions />
+        <Application />
+        <Questions />
+        <ToastContainer position='top-center' />
       </GlobalAppContainer>
     </AppThemeProvider>
   );

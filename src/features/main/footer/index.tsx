@@ -10,12 +10,16 @@ import {
   BankLicense,
   Label,
   Link,
+  UsaidLogo,
+  PartnersTitle,
 } from './styled';
 import { IconFooterLogo } from '../../../components/icons/iconFooterLogo';
 import { useTranslation } from 'react-i18next';
 import { IconInsta } from '../../../components/icons/iconInsta';
 import { IconFacebook } from '../../../components/icons/iconFacebook';
 import { IconTwit } from '../../../components/icons/iconTwit';
+import { IconSentiLogo } from '../../../components/icons/iconSentiLogo';
+import usaidLogo from 'src/assets/icons/usaidLogo.png';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -36,11 +40,16 @@ export const Footer: React.FC = () => {
             <Link target='_blank' rel='noreferrer' href={'https://twitter.com/doscredobank_kg'}>
               <IconTwit />
             </Link>
+            <BankLicense>{t('footer.history')}</BankLicense>
           </BottomContentBox>
           <BankInfoBox>
-            <BankLicense>{t('footer.history')}</BankLicense>
+            <PartnersTitle>{t('global.officialPartners')}</PartnersTitle>
+            <UsaidLogo>
+              <img src={usaidLogo} alt='' />
+            </UsaidLogo>
+            <IconSentiLogo />
           </BankInfoBox>
-          <BottomContentBox style={{ marginRight: 0 }}>
+          <BottomContentBox>
             <Label target='_blank' rel='noreferrer' href={'https://www.dcb.kg/ru/'}>
               dcb.kg
             </Label>
